@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">   
+</head>
+<body>
+    <div class="Men">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+         <!--Layouts-->
+         
+        <div class="menlay"> 
+          <h1 class="menheadfirst text-center">Style is something each of us already has<br>all we need to do is find it✨</h1>   
+        <div class="d-flex justify-content-center">
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/4a/67/b7/4a67b7b5706d94efc87517c0eb8cead3.jpg" class="menimageres" alt="">
+                <h1 class="menheading">Ethnic Wear</h1>
+                <p class="menparagraph"><a href="{{url_for('menethnic')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+                <img src="https://i.pinimg.com/736x/84/48/af/8448af80944eaca909874361f6009221.jpg" class="menimageres" >
+                <h1 class="menheading">Trendy Wear</h1>
+                <p class="menparagraph"><a href="{{url_for('westernmen')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/4e/8c/72/4e8c72cb65eca0b1b0bbed201b4053de.jpg"class="menimageres" alt="">
+                <h1 class="menheading">Foot Wear</h1>
+                <p class="menparagraph"><a href="{{url_for('footwearmen')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div></div>
+            <div class="d-flex justify-content-center">
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/eb/ff/0f/ebff0ff711ff688daa4153a388d125ef.jpg"class="menimageres" alt="">
+                <h1 class="menheading">Perfumes</h1>
+                <p class="menparagraph"><a href="{{url_for('perfumesmen')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/42/f8/b9/42f8b9122d353c58e0732ffea7ee3e52.jpg"class="menimageres" alt="">
+                <h1 class="menheading">Watches</h1>
+                <p class="menparagraph"><a href="{{url_for('watchsmen')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/28/6e/c7/286ec72fda7069f7deb9bb4470d668b3.jpg" class="menimageres" alt="">
+                <h1 class="menheading">Sun Glasses</h1>
+                <p class="menparagraph"><a href="{{url_for('glassesmen')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-center">
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/d0/42/e1/d042e101bbdbde612e9439edb2b117bf.jpg"class="menimageres" alt="">
+                <h1 class="menheading">Wallet</h1>
+                <p class="menparagraph"><a href="{{url_for('wallet')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+                <img src="https://i.pinimg.com/564x/39/44/18/39441815722f96351f04e784a1dbe80d.jpg"class="menimageres" alt="">
+                <h1 class="menheading">Belts</h1>
+                <p class="menparagraph"><a href="{{url_for('belts')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="mencard">
+              <img src="https://i.pinimg.com/564x/6c/3d/5f/6c3d5f6783af83dda38c44afa2447da6.jpg"class="menimageres" alt="">
+              <h1 class="menheading">Cosmetics</h1>
+              <p class="menparagraph"><a href="{{url_for('mencosmetics')}}"><button class="btn btn-outline-warning">View</button></a></p>
+          </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

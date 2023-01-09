@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnic Wear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--layout-->
+        <div class="ethniclay"> 
+            <h1 class="ethnicheadfirst">Traditional outfit is not just attire, it’s a culture🤍</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://www.zatki.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/f/sf-396_11_.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">YELLOW KANJIVARAM SAREE<br>₹65,999</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='YELLOW KANJIVARAM SAREE',q=1,price=65999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://5.imimg.com/data5/TB/HK/EV/SELLER-29603120/designer-silk-saree-1000x1000.jpeg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">PEACOCK COLOR SILKSAREE<br>₹5,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='PEACOCK COLOR SILKSAREE',q=1,price=5999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://m.media-amazon.com/images/I/714WBvl9TCL._UL1500_.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">GREEN COTTON SAREE<br>₹2,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='GREEN COTTON SAREE',q=1,price=2999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://5.imimg.com/data5/MB/QP/CY/SELLER-43239049/digainer-bridal-lehanga-500x500.jpeg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">RED DESIGNER LEHANGA<br>₹9,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='RED DESIGNER LEHANGA',q=1,price=9999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://www.ethnicplus.in/media/amasty/webp/catalog/product/cache/463325e7adc453e0375922c92777ec2d/s/k/sky_soft_net_lahenga_1__jpeg.webp" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">SKYBLUE NET LEHANGA<br>₹11,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='SKYBLUE NET LEHANGA',q=1,price=11999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/236x/84/97/40/849740ca69a2f5841c8ef06c6796dbd4.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">PINK LANGA VONI<br>₹6,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='PINK LANGA VONI',q=1,price=6999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex justify-content-center">
+              <div class="ethniccard">
+                <img src="https://www.jiofab.com/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/n/e/newly-arrived-white-party-wear-sharara-suit-jf303953-3.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">WHITE SHARARA<br>₹1,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='WHITE SHARARA',q=1,price=1999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://cdn.shopify.com/s/files/1/0046/4506/0680/products/shamita-shetty-yellow-net-lehenga-kurta-nc15127_800x.jpg?v=1615357157" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">YELLOW LEHANGA AND KURTA SET<br>₹2,599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='YELLOW LEHANGA AND KURTA SET',q=1,price=2599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://images1.yosari.com/89375-thickbox_default/navy-blue-designer-party-wear-adda-silk-anarkali-suit.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">NAVY BLUE ANARKALI SET<br>₹999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='NAVY BLUE ANARKALI SET',q=1,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18652620/2022/8/26/4d5f7043-a460-42e5-b67a-b04d9c0bc7041661503606623-KALINI-Women-Beige-Floral-Yoke-Design-Kurta-with-Trousers--W-1.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">NUDE COLOR KURTA SET<br>₹999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='NUDE COLOR KURTA SET',q=1,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://82a6b5f7149eb3f7a212-7eb132fe5834a35ac015040aa9228f18.ssl.cf2.rackcdn.com/product-hugerect-1061924-306611-1496560660-c7504e15c13a6818933607606bce0fb2.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">GREEN NET LONG FOCK<br>₹9,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='GREEN NET LONG FOCK',q=1,price=9999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/ethnic-set/p/4/2/xxl-71sjkrdht-sajke-original-imafwhdpp8tdhc5c-bb.jpeg?q=70" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">RED KURTA WITH DHOTI PANT<br>₹799</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='RED KURTA WITH DHOTI PANT',q=1,price=799)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              </div>
+              <a href="{{url_for('women')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

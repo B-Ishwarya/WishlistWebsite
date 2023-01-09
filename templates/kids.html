@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">   
+</head>
+<body>
+    <div class="women">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+         <!--Layouts-->
+         
+        <div class="kidslay"> 
+          <h1 class="womenheadfirst text-center">Let your childs future be stylish✨</h1>   
+        <div class="d-flex justify-content-center">
+            <div class="womencard">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20220810/dTrm/62f359e1aeb26921afda638c/-288Wx360H-464192671-burgundy-MODEL.jpg" class="womenimageres" alt="">
+                <h1 class="womenheading">Girls Clothing</h1>
+                <p class="womenparagraph"><a href="{{url_for('girlsclothing')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="womencard">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvcflpTU2usyY1MyEIdAKRVY9aan5TLRUdQ&usqp=CAU" class="womenimageres" >
+                <h1 class="womenheading">Boys Clothing</h1>
+                <p class="womenparagraph"><a href="{{url_for('boysclothing')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="womencard">
+                <img src="https://ae01.alicdn.com/kf/H46e86cd8fb8c4ce5ba25139ded88f757g/Summer-Kids-Sandals-Graffiti-Casual-Boys-Beach-Shoes-Outdoor-Braided-Fabric-Flats-Size28-41-Teenagers-Sports.jpg_Q90.jpg_.webp"class="womenimageres" alt="">
+                <h1 class="womenheading">Footwear</h1>
+                <p class="womenparagraph"><a href="{{url_for('kidsfootwear')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div></div>
+            <div class="d-flex justify-content-center">
+            <div class="womencard">
+                <img src="https://rukminim1.flixcart.com/image/416/416/krjjde80/block-construction/p/h/o/100-best-quality-gift-100-pcs-building-blocks-creative-learning-original-imag5byubgdgz9gk.jpeg?q=70"class="womenimageres" alt="">
+                <h1 class="womenheading">Toys</h1>
+                <p class="womenparagraph"><a href="{{url_for('toys')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="womencard">
+                <img src="https://images.indianexpress.com/2019/10/fashion-baby.jpg"class="womenimageres" alt="">
+                <h1 class="womenheading">Infants</h1>
+                <p class="womenparagraph"><a href="{{url_for('infants')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="womencard">
+                <img src="https://rukminim1.flixcart.com/image/416/416/kk01pjk0/hair-accessory/d/p/f/110pc-beautiful-hair-accessories-set-combo-for-kids-girls-women-original-imafzg8pcthznpny.jpeg?q=70" class="womenimageres" alt="">
+                <h1 class="womenheading">Kids Accessories</h1>
+                <p class="womenparagraph"><a href="{{url_for('kidsaccessories')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

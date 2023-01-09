@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Needs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">   
+</head>
+<body>
+    <div class="Men">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+         <!--Layouts-->
+         
+        <div class="womenlay"> 
+          <h1 style="text-align:center;font-family:'Times New Roman', Times, serif;color:purple">Home is where love resides, memories are created and laughter never ends🏠<br>Home is not a place…it’s a feeling🤍</h1>   
+        <div class="d-flex justify-content-center">
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/fa/f5/ca/faf5ca79a0d13cb3d49980d2f5a6eedc.jpg" class="homeimageres" alt="">
+                <h1 class="homeheading">Lamps</h1>
+                <p class="homeparagraph"><a href="{{url_for('lamps')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/a4/98/76/a49876338c36ca2665c251114e1e514c.jpg" class="homeimageres" >
+                <h1 class="homeheading">Plants</h1>
+                <p class="homeparagraph"><a href="{{url_for('plants')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/67/11/d2/6711d2c77ddcc30f5907f32dc484f47a.jpg"class="homeimageres" alt="">
+                <h1 class="homeheading">Statues</h1>
+                <p class="homeparagraph"><a href="{{url_for('statues')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div></div>
+            <div class="d-flex justify-content-center">
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/77/25/94/772594e2de5bb2dfe5a392236b3ea7c3.jpg"class="homeimageres" alt="">
+                <h1 class="homeheading">Carpets</h1>
+                <p class="homeparagraph"><a href="{{url_for('carpets')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/51/ef/4a/51ef4ae7f854971a4c006f83ec5f893d.jpg"class="homeimageres" alt="">
+                <h1 class="homeheading">Organisers</h1>
+                <p class="homeparagraph"><a href="{{url_for('organisers')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/a4/04/a4/a404a4e8a81a255ad617752e5d7ae3b0.jpg" class="homeimageres" alt="">
+                <h1 class="homeheading">Clocks</h1>
+                <p class="homeparagraph"><a href="{{url_for('clocks')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-center">
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/6f/d1/c0/6fd1c0c80977995fb74ea2741e33cb29.jpg"class="homeimageres" alt="">
+                <h1 class="homeheading">Bedsheet Sets</h1>
+                <p class="homeparagraph"><a href="{{url_for('bedsheetsets')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+                <img src="https://i.pinimg.com/564x/fb/fa/c4/fbfac459a52bacff59bda32091f4a5e5.jpg"class="homeimageres" alt="">
+                <h1 class="homeheading">Door Mats</h1>
+                <p class="homeparagraph"><a href="{{url_for('doormats')}}"><button class="btn btn-outline-warning">View</button></a></p>
+            </div>
+            <div class="homecard">
+              <img src="https://i.pinimg.com/564x/55/a2/60/55a2604a8c9ca58a66011fec93f84f3b.jpg"class="homeimageres" alt="">
+              <h1 class="homeheading">Mirrors</h1>
+              <p class="homeparagraph"><a href="{{url_for('mirrors')}}"><button class="btn btn-outline-warning">View</button></a></p>
+          </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

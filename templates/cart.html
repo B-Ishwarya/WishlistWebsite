@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
+</head>
+<body>
+    <div class="cart">
+       <!--Nav Bar-->
+       <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+              </li>
+              
+              
+              <li class="nav-item" >
+                <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <div class="cartlay">
+        {% for i in data %}
+                         <!--fruits-->
+                  {% if i=='APPLE' %}
+                  <img src="https://5.imimg.com/data5/LM/DU/MY-22954806/apple-fruit-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='BANANA' %}
+                  <img src="https://c.ndtvimg.com/2019-04/dl9g6gn8_bananas_625x300_11_April_19.jpg?ver-20221119.02" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    
+                  {% elif i=='ORANGE' %}
+                  <img src="https://5.imimg.com/data5/SELLER/Default/2020/9/RI/WF/GL/106270270/orange-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='PAPAYA' %}
+                       <img src="https://img.freepik.com/free-photo/fresh-papaya-fruit_144627-34201.jpg?w=2000" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='WATER MELON' %}
+                       <img src="https://4.imimg.com/data4/IB/VC/ANDROID-56873828/product-500x500.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='PINEAPPLE' %}
+                       <img src="https://5.imimg.com/data5/WT/GN/ZH/SELLER-3722283/pineapple-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='CUSTARD APPLE' %}
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM7JX2qUsNxqYkInfTuufJ-z_tIaN2a8jJxQ&usqp=CAU" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='POMEGRANATE' %}
+                       <img src="https://m.media-amazon.com/images/I/81AalDQ2wwL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='JACKFRUIT' %}
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8NJ51ERlZIToiBMOBA7HyyI3ZaKQKR88SQ&usqp=CAU" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='SAPOTA' %}
+                       <img src="https://cdn-gnebd.nitrocdn.com/SostvgoyBREyWltnmqSYIAxRtppfZhzO/assets/static/optimized/rev-0229bb4/wp-content/uploads/2022/12/sapota1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='KIWI' %}
+                       <img src="https://cdn.britannica.com/45/126445-050-4C0FA9F6/Kiwi-fruit.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='DRAGON FRUIT' %}
+                       <img src="http://cdn.shopify.com/s/files/1/0586/7303/7499/products/DragonFruit1pc.jpg?v=1660188898" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='BLACKBERRY' %}
+                       <img src="https://thumbs.dreamstime.com/b/close-up-collection-indian-ayurvedic-medicinal-fresh-fruit-jamun-syzygium-cumini-black-plum-isolated-white-background-250100049.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='STRAWBERRY' %}
+                       <img src="https://wanya.in/wp-content/uploads/2019/12/p11-1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='BLUEBERRY' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/30009286_7-fresho-blueberry.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='CHERRY' %}
+                       <img src="https://iranfreshfruit.net/wp-content/uploads/2020/01/red-cherry-2.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='RASPBERRY' %}
+                       <img src="https://www.12taste.com/wp-content/uploads/2020/10/raspberry.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='MULLBERRY' %}
+                       <img src="https://www.aishcart.in/3245-large_default/mulberry-250-gm.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Vegetables-->
+                  {% elif i=='TOMATO' %}
+                       <img src="https://m.economictimes.com/thumb/msid-95423731,width-1200,height-900,resizemode-4,imgsize-56196/tomatoes-canva.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                  {% elif i=='POTATO' %}
+                       <img src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                   {% elif i=='ONION' %}
+                       <img src="https://www.macmillandictionary.com/external/slideshow/full/135967_full.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='BRINJAL' %}
+                       <img src="https://smartyield.in/wp-content/uploads/2021/06/Big-brinjal-eggplant.png" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CABBAGE' %}
+                       <img src="https://www.eatrightbasket.com/wp-content/uploads/2019/02/SS_Veg_26.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CAULIFLOWER' %}
+                       <img src="https://m.media-amazon.com/images/I/91EdPVzD99L._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pc<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CAPSICUM' %}
+                       <img src="https://t4.ftcdn.net/jpg/02/87/25/37/360_F_287253716_I1seSRet5pt8YGBRRcTbPPV1WesM00n9.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='GREEN CHILLI' %}
+                       <img src="http://cdn.shopify.com/s/files/1/0451/1101/7626/products/biggreenchilliseeds.jpg?v=1606738066" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CUCUMBER' %}
+                       <img src="https://www.jiomart.com/images/product/600x600/590003548/cucumber-500-g-product-images-o590003548-p590003548-0-202203152002.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='BOTTLE GOURD' %}
+                       <img src="http://cdn.shopify.com/s/files/1/0451/1101/7626/products/bottlegourdseeds.jpg?v=1603963208" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='BITTER GOURD' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0273/5551/2875/products/Bitter_1_720x.jpg?v=1591173729" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='PEAS' %}
+                       <img src="http://cdn.shopify.com/s/files/1/1380/2059/products/Peas_grande.jpg?v=1598082087" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='SPINACH' %}
+                       <img src="https://m.media-amazon.com/images/I/413AzNlAeoL._SX466_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CORIANDER' %}
+                       <img src="https://rukminim1.flixcart.com/image/416/416/ke7ff680/plant-seed/g/r/e/120-coriander-seeds-xll-254-vibex-original-imafuxaay4zyer9v.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='MINT' %}
+                       <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/266128_2200-732x549.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='SPRING ONION' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/20000981_7-fresho-spring-onion-with-roots.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='FENUGREEK LEAVES' %}
+                       <img src="https://5.imimg.com/data5/SELLER/Default/2020/12/BJ/JX/JD/80466074/fenugreek-leaves-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='GONGURA' %}
+                       <img src="https://secureservercdn.net/50.62.174.80/l2h.079.myftpupload.com/wp-content/uploads/2018/08/gongura.png?time=1666892010" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}bunch<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+
+                       <!--Spices-->
+
+                    
+                    {% elif i=='CARDAMOM' %}
+                       <img src="https://nutnutties.com/wp-content/uploads/2021/10/Cardamom.jpgs" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CLOVE' %}
+                       <img src="https://library.princeton.edu/visual_materials/maps/websites/pacific/spice-islands/cloves.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='RED CHILLI POWDER' %}
+                       <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/CD/XN/HE/93958152/red-chilli-powder-1000x1000.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='TURMERIC' %}
+                       <img src="https://m.media-amazon.com/images/I/51UYf+rk1cL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='FENNEL SEEDS' %}
+                       <img src="https://images.news18.com/ibnlive/uploads/2022/01/fennel-seeds.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CORIANDER SEEDS' %}
+                       <img src="https://m.media-amazon.com/images/I/51vpZrRFHoL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CUMIN SEEDS' %}
+                       <img src="https://m.media-amazon.com/images/I/510Rk4hEqjL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='GARAM MASALA' %}
+                       <img src="https://www.seriouseats.com/thmb/kcVRsgt94S0g9N9I2zljZiOt1fQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__04__20150402-garam-masala-2879a150647d4403bdc0645e71a2ae0a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CINNAMON' %}
+                       <img src="https://www.natureloc.com/image/cache/catalog/products/cinnamon-bark-natureloc-p-1-600x600.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='MUSTARD SEEDS' %}
+                       <img src="https://www.narayanahealth.org/blog/wp-content/uploads/2022/07/shutterstock_164078804.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CHAT MASALA' %}
+                       <img src="https://www.goldenmayura.com/wp-content/uploads/2021/04/chaat.masala.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='STAR ANISE' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0062/4214/0227/products/SP_26-02_2048x.jpg?v=1540659101" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='GONGURA' %}
+                       <img src="https://secureservercdn.net/50.62.174.80/l2h.079.myftpupload.com/wp-content/uploads/2018/08/gongura.png?time=1666892010" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Oils-->
+
+                    {% elif i=='COCONUT OIL' %}
+                       <img src="https://healthypaleo.in/wp-content/uploads/2020/10/COCONUT-OIL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='SOYBEAN OIL' %}
+                       <img src="https://vijayimpex.co.in/wp-content/uploads/2018/07/soyabeanVI.png" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='SESAME OIL' %}
+                       <img src="https://bioappetito.com/wp-content/uploads/2020/09/Sesame-Oil.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='PEANUT OIL' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0475/8398/5816/products/Groundnut_Oil_2_1024x1024.jpg?v=1605758159" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='RICE BRAN OIL' %}
+                       <img src="https://www.drweil.com/wp-content/uploads/2016/11/diet-nutrition_cooking-cookware_is-rice-bran-oil-healthy_1440x1080_000046733624.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='SUNFLOWER OIL' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0475/8398/5816/products/Sunflower_Oil_2_1024x1024.jpg?v=1605758161" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='OLIVE OIL' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0017/9234/4153/products/oliveoil_1024x1024@2x.jpg?v=1627216046" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='COTTONSEED OIL' %}
+                       <img src="https://post.healthline.com/wp-content/uploads/2018/12/cottonseed_oil-732x549-thumbnail.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='CORN OIL' %}
+                       <img src="https://www.ambujagroup.com/wp-content/uploads/2020/02/Corn-Refined-Oil.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='FLAXSEED OIL' %}
+                       <img src="https://post.healthline.com/wp-content/uploads/2020/09/pitcher-flaxseed-oil-thumb.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='BUTTER' %}
+                       <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/04/butter-curls-1296x728-header.jpg?w=1155&h=1528" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                    {% elif i=='GHEE' %}
+                       <img src="https://shop.jivabhumi.com/image/cache/catalog/1l-desi-ghee-500x500%2022-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MIX DRYFRUITS PACK' %}
+                       <img src="https://www.jiomart.com/images/product/original/490000331/lay-s-magic-masala-potato-chips-52-g-product-images-o490000331-p490000331-0-202203150844.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='LAYS' %}
+                       <img src="https://www.jiomart.com/images/product/original/490000331/lay-s-magic-masala-potato-chips-52-g-product-images-o490000331-p490000331-0-202203150844.jpg" alt="" class="fruitimage"><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='KURKURE' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/1205616-2_1-kurkure-namkeen-masala-munch.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='BINGO' %}
+                       <img src="https://m.media-amazon.com/images/I/81tzFgAzZBL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='HIDE AND SEEK' %}
+                       <img src="https://m.media-amazon.com/images/I/41Mv0-eaFUL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='OREO' %}
+                       <img src="https://5.imimg.com/data5/SC/AK/LJ/SELLER-19591746/cadbury-oreo-vanilla-creme-biscuit-50gm-mrp-rs-10-1000x1000.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='DORITOS' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0435/3559/7720/products/e469d455-dfaf-48a4-b191-24c280d2b9ab_1000x.jpg?v=1600490101" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='5 STAR' %}
+                       <img src="https://m.media-amazon.com/images/I/61FQgF6lLRL._SX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='DAIRY MILK' %}
+                       <img src="https://m.media-amazon.com/images/I/61-o6tGXBmL._SX522_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='KITKAT' %}
+                       <img src="https://m.media-amazon.com/images/I/71XCogOzuTL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MILKY BAR' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/l/40122238_9-milkybar-white-chocolate-creamy.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='PARLE G' %}
+                       <img src="https://m.media-amazon.com/images/I/51u7Y9k3EWL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+
+                       <!--Drinks-->
+                     {% elif i=='THUMBS UP' %}
+                       <img src="https://m.media-amazon.com/images/I/61Ks4rgOAeL._SX522_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='SPRITE' %}
+                       <img src="https://m.media-amazon.com/images/I/510TTRVmhzL._SX522_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='COCO-COLA' %}
+                       <img src="https://m.media-amazon.com/images/I/71YBmiSj-cL._SX522_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='SLICE' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/265879_15-slice-thickest-mango-drink.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MAAZA' %}
+                       <img src="https://m.media-amazon.com/images/I/61+jGc7vLIL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='LIMCA' %}
+                       <img src="https://www.jiomart.com/images/product/original/491085936/limca-750-ml-product-images-o491085936-p491085936-0-202203170642.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MIRINDA' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/40094180-9_3-mirinda-soft-drink.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='7UP' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/40130830_8-7-up-soft-drink-lemon.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='FANTA' %}
+                       <img src="https://www.jiomart.com/images/product/original/491085933/fanta-orange-flavoured-750-ml-product-images-o491085933-p491085933-0-202203151951.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MOUNTAIN DEW' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/265874_5-mountain-dew-soft-drink.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='FROOTI' %}
+                       <img src="https://5.imimg.com/data5/II/GC/QZ/SELLER-29161029/mango-frooti-bottle-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='PEPSI' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/xxl/251047_22-pepsi-soft-drink.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='PARLE G' %}
+                       <img src="https://m.media-amazon.com/images/I/51u7Y9k3EWL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}pack<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                  <!--Personal Care-->
+                     {% elif i=='DABUR  RED TOOTH PASTE' %}
+                       <img src="https://newassets.apollo247.com/pub/media/catalog/product/9/0/908_daber_paste_200g_ecom_1000x1000.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='COLGATE TOOTH PASTE' %}
+                       <img src="https://m.media-amazon.com/images/I/61nctAojOEL._SL1000_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:pack of{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='REXONA SOAP' %}
+                       <img src="https://m.media-amazon.com/images/I/51hfniQPHSL._SL1000_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:pack of{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='AMBIPUR' %}
+                       <img src="https://m.media-amazon.com/images/I/514F8mN8NgL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:pack of{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='DETTOL SOAP' %}
+                       <img src="https://www.jiomart.com/images/product/600x600/491390879/dettol-original-soap-75-g-pack-of-4-product-images-o491390879-p491390879-0-202203150038.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:pack of{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='DETTOL HAND WASH' %}
+                       <img src="https://m.media-amazon.com/images/I/61NReC378wL._SL1000_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='DETTOL LIQUID' %}
+                       <img src="https://5.imimg.com/data5/NM/CG/ZI/SELLER-37093038/dettol-antiseptic-liquid-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='TIDE SURF' %}
+                       <img src="https://m.media-amazon.com/images/I/81fjIPmrakL._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='COMFORT CONDITIONER' %}
+                       <img src="https://m.media-amazon.com/images/I/61ysR0hSLhL._SY450_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='VIM SOAP Bar' %}
+                       <img src="https://m.media-amazon.com/images/I/61szrCRWOEL._SL1000_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:packk of{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='NYLE SHAMPOO' %}
+                       <img src="https://asset20.ckassets.com/resources/image/ckseller/CKS-Shampoo-000093_1-1625501814.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='PANTENE SHAMPOO' %}
+                       <img src="https://www.jiomart.com/images/product/original/490003892/pantene-pro-v-hair-fall-control-shampoo-340-ml-product-images-o490003892-p490003892-0-202203150028.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Dairy Products-->
+                     {% elif i=='MILK' %}
+                       <img src="https://downshiftology.com/wp-content/uploads/2022/10/Almond-Milk-Recipe-22-8.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}L<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CREAM' %}
+                       <img src="https://www.errenskitchen.com/wp-content/uploads/2018/07/Untitled-design-35.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='PANEER' %}
+                       <img src="https://img3.exportersindia.com/product_images/bc-full/2021/10/9489169/soya-panner-tofu-panner-soya-milk-masala-1634825795-6046558.png" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='YOGURT' %}
+                       <img src="https://www.daringgourmet.com/wp-content/uploads/2021/01/How-to-Make-Yogurt-7.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CHEESE' %}
+                       <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthiest-cheese-1296x728-swiss.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CUSTARD' %}
+                       <img src="https://www.spendwithpennies.com/wp-content/uploads/2022/04/Vanilla-Custard-SpendWithPennies-10.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MILK POWDER' %}
+                       <img src="https://cpimg.tistatic.com/06234519/b/4/Full-Cream-Milk-Powder-Skimmed-Milk-best-Price-Sweet-Whey-Powder.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='BUTTER MILK' %}
+                       <img src="https://www.cookwithmanali.com/wp-content/uploads/2017/06/Masala-Chaas-Recipe.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='WIPPED CREAM' %}
+                       <img src="https://loveandflourbypooja.com/wp-content/uploads/2020/05/Make-Your-Own-Whipped-Cream-at-Home-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='BREAD' %}
+                       <img src="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}packet<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='VANILLA ICE-CREAM' %}
+                       <img src="https://media.istockphoto.com/id/948032164/photo/ice-cream.jpg?s=612x612&w=0&k=20&c=EWy8rEsWVuv67-DWH0a-rAlI7GSy1FAU237yg1TwFKg=" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CONDENSED MILK' %}
+                       <img src="https://4sonrus.com/wp-content/uploads/2013/09/DSC_6062-scaled.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Dals and more-->
+
+                     {% elif i=='URAD DAL' %}
+                       <img src="https://www.standardcoldpressedoil.com/media/catalog/product/cache/818eaf4fe91690f14907bbe1ba289f94/d/a/dall_copy_1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='MASOOR DAL' %}
+                       <img src="https://www.jiomart.com/images/product/600x600/491187256/good-life-masoor-dal-500-g-product-images-o491187256-p491187256-2-202203151531.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='TOOR DAL' %}
+                       <img src="https://www.standardcoldpressedoil.com/media/catalog/product/cache/2c6cd9243cb1551cdfc79b6614ec38f0/t/o/toor_dal_1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='GREEN MOONG DAL' %}
+                       <img src="https://m.media-amazon.com/images/I/51YgnrMPxEL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='YELLOW MOONG DAL' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0489/5028/0356/products/yellow_lentil_yellow_mung_dal_i_1920_55f5e16b-5160-4e63-8403-37dcf75a649b.jpg?v=1632778162&width=1946" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CHICKPEAS' %}
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNvHmT2sdkLfRJmGR1fXVHZAB8NS2n9ElbB7uTetAZO6k2Hw1_IWYFT1YFhBJzj-WAYE&usqp=CAU" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:pack of {{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='CHANA DAL' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0436/8803/4457/products/20000432-3_7-bb-popular-channa-dal_500x500.jpg?v=1595488290" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='KIDNEY BEANS' %}
+                       <img src="https://5.imimg.com/data5/EJ/WC/UG/SELLER-106270270/kidney-beans-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='SOYBEAN' %}
+                       <img src="https://origin.club/media/catalog/product/cache/86eaafd287624d270d87c663dd3976d5/s/o/soyabean_2__3.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='SOYA CHUNKS' %}
+                       <img src="https://m.media-amazon.com/images/I/61z73GpItcL._SL1081_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='RICE' %}
+                       <img src="https://img.freepik.com/free-photo/milled-rice-bowl-wooden-spoon-black-cement-floor_1150-20054.jpg?w=2000" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                     {% elif i=='BROWN RICE' %}
+                       <img src="https://www.bigbasket.com/media/uploads/p/l/40072466-5_5-bb-royal-organic-brown-rice.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}kg<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+
+                       <!--Women-Ethnic---->
+
+
+                       {% elif i=='YELLOW KANJIVARAM SAREE' %}
+                       <img src="https://www.zatki.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/f/sf-396_11_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PEACOCK COLOR SILKSAREE' %}
+                       <img src="https://5.imimg.com/data5/TB/HK/EV/SELLER-29603120/designer-silk-saree-1000x1000.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREEN COTTON SAREE' %}
+                       <img src="https://m.media-amazon.com/images/I/714WBvl9TCL._UL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='RED DESIGNER LEHANGA' %}
+                       <img src="https://5.imimg.com/data5/MB/QP/CY/SELLER-43239049/digainer-bridal-lehanga-500x500.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='SKYBLUE NET LEHANGA' %}
+                       <img src="https://www.ethnicplus.in/media/amasty/webp/catalog/product/cache/463325e7adc453e0375922c92777ec2d/s/k/sky_soft_net_lahenga_1__jpeg.webp" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PINK LANGA VONI' %}
+                       <img src="https://i.pinimg.com/236x/84/97/40/849740ca69a2f5841c8ef06c6796dbd4.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='WHITE SHARARA' %}
+                       <img src="https://www.jiofab.com/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/n/e/newly-arrived-white-party-wear-sharara-suit-jf303953-3.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='YELLOW LEHANGA AND KURTA SET' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0046/4506/0680/products/shamita-shetty-yellow-net-lehenga-kurta-nc15127_800x.jpg?v=1615357157" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='NAVY BLUE ANARKALI SET' %}
+                       <img src="https://images1.yosari.com/89375-thickbox_default/navy-blue-designer-party-wear-adda-silk-anarkali-suit.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='NUDE COLOR KURTA SET' %}
+                       <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18652620/2022/8/26/4d5f7043-a460-42e5-b67a-b04d9c0bc7041661503606623-KALINI-Women-Beige-Floral-Yoke-Design-Kurta-with-Trousers--W-1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREEN NET LONG FOCK' %}
+                       <img src="https://82a6b5f7149eb3f7a212-7eb132fe5834a35ac015040aa9228f18.ssl.cf2.rackcdn.com/product-hugerect-1061924-306611-1496560660-c7504e15c13a6818933607606bce0fb2.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='RED KURTA WITH DHOTI PANT' %}
+                       <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/ethnic-set/p/4/2/xxl-71sjkrdht-sajke-original-imafwhdpp8tdhc5c-bb.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Women-Western-->
+
+
+                       {% elif i=='DARK NAVY BLUE JEANS' %}
+                       <img src="https://images.bewakoof.com/t640/women-s-blue-washed-slim-fit-high-waist-jeans-339746-1656182348-1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='ICE BLUE JEANS' %}
+                       <img src="https://m.media-amazon.com/images/I/61xwpQmhzXL._UX569_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE JEANS' %}
+                       <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11035316/2019/12/12/db88ac98-9ac6-4a3c-a974-ff459c04613c1576140065411-DOLCE-CRUDO-Women-Blue-Skinny-Fit-High-Rise-Clean-Look-Stret-1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BOTTLE GEEN SHORT TOP' %}
+                       <img src="https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/top/4/1/o/xs-tr-19-brijam-original-imageg7hfcegdujb.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PEACH COLOR SHORT TOP' %}
+                       <img src="https://rukminim1.flixcart.com/image/612/612/klphn680/top/n/5/x/xl-regular-top-fab-star-original-imagyry2geb5ztzq.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE FLORAL TOP' %}
+                       <img src="https://rukminim1.flixcart.com/image/612/612/kxz0pe80/top/c/z/e/l-wl-5001-sky-blue-l-wedani-original-imagab5uyjmgjxhh.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='RED FROCK' %}
+                       <img src="https://images.meesho.com/images/products/166874695/a6bra_512.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE DENIM JACKET' %}
+                       <img src="https://5.imimg.com/data5/OF/DT/MY-43371451/denim-girls-jacket-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='LIGHT BLUE DENIM JACKET' %}
+                       <img src="https://5.imimg.com/data5/ANDROID/Default/2020/10/BH/OL/LA/77170183/product-jpeg-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='DARK BLUE PLEATED SKIRT' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300913827ROYALBLUE_2_1024x1024.jpg?v=1664462186" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BROWN RUFFLED LAYER SKIRT' %}
+                       <img src="https://img3.junaroad.com/uiproducts/18213411/pri_175_p-1641976549.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREEN JAIPURI PRINT SKIRT' %}
+                       <img src="https://assets.ajio.com/medias/sys_master/root/20210727/cfJQ/60ffd76daeb269a9e355bc25/-473Wx593H-462685540-green-MODEL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+
+                       <!--Women-Watches-->
+
+                      
+                       {% elif i=='WHITE CHAIN WATCH' %}
+                       <img src="https://4.imimg.com/data4/TY/BL/ANDROID-36086933/product-1000x1000.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BABY PINK CHAIN WATCH' %}
+                       <img src="https://img.tatacliq.com/images/i8/437Wx649H/MP000000015256304_437Wx649H_202211112102031.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE BELT WATCH WITH BRACELET' %}
+                       <img src="https://rukminim1.flixcart.com/image/416/416/l4hcx3k0/watch/4/a/m/2-modern-stylish-2-watch-combo-for-women-and-girls-gm326-g59-original-imagfd25989bmfxh.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GOLD COLOR MAGNETIC WATCH' %}
+                       <img src="https://n2.sdlcdn.com/imgs/j/t/2/Cosmic-Metal-Round-Womens-Watch-SDL756227755-1-b8ce2.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BIG DAIL NUDE COLOR WATCH' %}
+                       <img src="https://cdn.luxe.digital/media/2020/09/17134727/best-women-watches-vincero-luxe-digital.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='DIGITAL WATCH' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0253/9628/1399/products/New-Silicone-Digital-Watch-Men-Sport-Women-Watches-Electronic-LED-Ladies-Male-Wrist-Watch-For-Men.jpg_640x640_3c8be01e-799c-48c4-a1f5-b3a71f16e433_1445x.jpg?v=1637670378" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      
+                      
+                       <!--Women-Footwear-->
+
+                       {% elif i=='BROWN CASUAL BOOTS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71l9kJkEXqL._SY625._SX._UX._SY._UY_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PEACH WIDGE SANDALS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61Br2KNlrkL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='WHITE BLOCK HEEL SANDALS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51oWI8b1ibL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLACK PLATFORM HEELS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/718f4V2X8wL._SY675._SX._UX._SY._UY_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREY FLATS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/818MndzrflL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GOLD KITTEN HEELS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/712Pswz1SsL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Women-Jewellery-->
+
+                       {% elif i=='SILVER CRYSTAL RHINESTONE CHOKER' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/616DGaI+sfL._UX575_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GOLD PLATED WEDDING JEWELLERY PEARL CHOKER' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81IQvh43G8L._UY575_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GODDESS LAKSHMI DEVI CHOKER & EARRINGS SET' %}
+                       <img src="https://assets.ajio.com/medias/sys_master/root/20221001/81M7/63376946f997ddfdbd01be7d/-473Wx593H-465090920-gold-MODEL9.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='CRYSTAL TASSEL EARRINGS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81DuCjcX6ZL._UY575_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PEARL KUNDAN BEADED CHANDBALI EARRINGS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/815MuwG4gtS._UY575_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='TRENDY FLORAL EARRINGS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71iJUvjnOZL._UY675_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Women-Handbags-->
+                       
+                       {% elif i=='LAVIE HANDBAG' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81rq4QJN0vL._UY575_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='NAVY BLUE HANDBAG' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71fArpzVrPL._UX625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='TRENDY MINI BACKPACK' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61MM0M-OliL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='MAROON OVAL SHAPE CLUTCH' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81OkMzXVwGL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='TRENDY CLUTCH' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81RZ-p77WTL._UX625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='RED POTLI BAG' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71+doVogygL._UY625_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       
+                       <!--Women-Handbags-->
+
+                       {% elif i=='HONEY BEES ON LENSES TRENDY GLASSES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51oKB1Ic+UL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='RETRO CAT EYE OVAL SUNGLASSES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/312SJSJBmML._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='LATEST AND STYLISH SUNGLASSES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51N+S7wuOLL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='SQUARE OVERSIZED SUNGLASSES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61I6N9tMd2S._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>{% elif i=='LATEST TRENDY CIRCLE SUNGLASSES' %}
+                       <img src="https://m.media-amazon.com/images/I/613FzWyIttL._UX569_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='DESIGNER BROWN SUNGLASSES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51GFjqz8LFL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+
+                      <!--Women-Handbags-->
+
+                      {% elif i=='MAYBELLINE SUPER BLACK KAJAL' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51XM2LWhd7L._SY450_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      {% elif i=='EYETEX KAJAL' %}
+                       <img src="https://m.media-amazon.com/images/I/71WqazLsl8L._SY550_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      {% elif i=='COLOSSAL MASCARA' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31wfFNGtc-L._SX300_SY300_QL70_FMwebp_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      {% elif i=='DAZZLER MASCARA' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41fU+pNrLCL._SY300_SX300_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      {% elif i=='VASELINE BODY LOTION' %}
+                       <img src="https://m.media-amazon.com/images/I/51ekWvE8pRL._SX522_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                      {% elif i=='VASELINE PETROLEUM JELLY 85g' %}
+                       <img src="https://m.media-amazon.com/images/I/51fp48N3DnL._SY355_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}g<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Women-Handbags-->
+
+                       {% elif i=='JASMINE PERFUME' %}
+                       <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS2k-9wDu9MkB9mBTf-xHfuXzgGDbXryszY-1NkyURmxQTTeUH1VQDTDXfJ2_ZQ5qKgCWGLzNouIzivakKfzcyoIGxBxUzcZQ5j_UXRWHI&usqp=CAE" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='LAVENDER PERFUME' %}
+                       <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFN9HzDcgbYafdVGMSC-Hd74U8UpGQVTeYfrhSWY0fNPb4_KdXzmkdxtBMfh2MlldODp5U_PfIjMlOPc9mJ4yW4aLxKmPD&usqp=CAE" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='ROSE PERFUME' %}
+                       <img src="https://m.media-amazon.com/images/I/61PYqP2Zd4L._SL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLOSSOM PERFUME' %}
+                       <img src="https://images-cdn.ubuy.co.id/7XAEFUMO-jimmy-choo-blossom-eau-de-parfum.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='WHITE LILLY PERFUME' %}
+                       <img src="https://i.etsystatic.com/24249730/r/il/737b06/2775516930/il_fullxfull.2775516930_7xiy.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='DIOR PERFUME' %}
+                       <img src="https://pbs.twimg.com/media/E0O-IxVWQAEpW1d.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Men-Western-->
+
+                       {% elif i=='Indo' %}
+                       <img src="https://i.pinimg.com/564x/95/e1/32/95e132fc67e45d37e5b1f049497b8a5f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Trendy Kurta paijama with shawl' %}
+                       <img src="https://i.pinimg.com/564x/b4/70/77/b47077925bd68d2ad0fa52f776cdf452.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Pathani kurta' %}
+                       <img src="https://i.pinimg.com/564x/ce/cd/0f/cecd0f3c00c179b38dcfeecfb0e7c059.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Western Sherwani' %}
+                       <img src="https://i.pinimg.com/564x/23/26/bc/2326bcf6ef7e0704ade7058f100d29b3.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Jaffri Bandgalla' %}
+                       <img src="https://i.pinimg.com/564x/52/a3/43/52a3439c81dfa40fa946866487cfa5d9.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Jodhpuri Suit' %}
+                       <img src="https://i.pinimg.com/564x/30/63/83/30638394f4b668a88e29bba7bd4869e4.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Men-Trendy-->
+
+                       {% elif i=='Casual Plaid Flannel ' %}
+                       <img src="https://i.pinimg.com/564x/81/f7/29/81f729d63790957bb7be19b5fa824432.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Spykar' %}
+                       <img src="https://i.pinimg.com/564x/3a/36/a5/3a36a5150a2e68018ed00e7399e9e746.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Roadster' %}
+                       <img src="https://i.pinimg.com/564x/4e/ad/e6/4eade63674ee7e1b367843ac6c90b1c5.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Track' %}
+                       <img src="https://i.pinimg.com/564x/c8/be/1a/c8be1a77896ae6f7f5b032562950d429.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Levi`s' %}
+                       <img src="https://i.pinimg.com/564x/ff/3e/aa/ff3eaae2bf4108baacf4ad90497afd73.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Funcky Sweater' %}
+                       <img src="https://i.pinimg.com/564x/a9/77/6a/a9776aa6f1f947becdf9a4ab000d2978.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Men-Trendy-->
+
+                       {% elif i=='Dr.Martens' %}
+                       <img src="https://i.pinimg.com/564x/5c/e4/7f/5ce47f993dac58561a96263c9122c36c.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Oliver Cabell' %}
+                       <img src="https://i.pinimg.com/564x/10/6c/ce/106ccea9a197148b4ad9545585bca0a7.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Santoni' %}
+                       <img src="https://i.pinimg.com/564x/6f/7f/e8/6f7fe84526315d76ba996c7badfb23ee.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Clarks' %}
+                       <img src="https://i.pinimg.com/564x/d9/92/4e/d9924e7036dc3e5bede264f0ff6e0361.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Birkenstock' %}
+                       <img src="https://i.pinimg.com/564x/fb/99/46/fb9946688ecac7f3e6091585461ddd0b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Berluti' %}
+                       <img src="https://i.pinimg.com/564x/74/37/86/7437865f81f21417c0401a17aba7fd9d.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Men-Trendy-->
+
+                       {% elif i=='Nautica  PERFUME' %}
+                       <img src="https://n3.sdlcdn.com/imgs/d/c/q/Nautica-Blue-Edt-Perfume-100-1536221-1-cc343.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Gucci Guilty PERFUME' %}
+                       <img src="https://th.bing.com/th/id/OIP.ljQPIzuK6XiC8irWq1naBwHaHS?pid=ImgDet&rs=1" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Guess Seductive Homme' %}
+                       <img src="https://i.pinimg.com/564x/1d/80/9f/1d809f0795750472fbe5180064b083f5.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Ulric de Varens perfume' %}
+                       <img src="https://www.eromman.com/images/detailed/825/yunsDiqN1569396630.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Villain' %}
+                       <img src="https://n3.sdlcdn.com/imgs/j/p/p/Villain-Hydra-Perfume-Eau-De-SDL840573630-1-36287.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Jaguar' %}
+                       <img src="https://th.bing.com/th/id/OIP.J0hkPI1kWHkf5oLTNHpF3QHaF6?pid=ImgDet&rs=1" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}ml<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Men-Trendy-->
+
+                       {% elif i=='Daniel Wellington' %}
+                       <img src="https://i.pinimg.com/564x/3b/22/ba/3b22bafc4f2468cf882262c3de4e4529.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Fossil' %}
+                       <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/UG/HB/MD/123576755/2020-06-30-11-47-img-4246-500x500.JPG" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Dkny' %}
+                       <img src="https://i.pinimg.com/564x/1c/c2/9d/1cc29d560d6eb03768f8c2205fd9b7ae.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Rolex' %}
+                       <img src="https://i.pinimg.com/564x/ad/8b/63/ad8b63da06c80d1a39e34f2a41f103ae.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Movado' %}
+                       <img src="https://i.pinimg.com/564x/bd/42/a0/bd42a0cca557f1b244fb4f4753766821.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Wrist' %}
+                       <img src="https://i.pinimg.com/564x/b4/0a/e8/b40ae8220c9977d87af47055ce41dbd9.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Men-sunglasses-->
+
+                       {% elif i=='Wayfarer Sunglasses' %}
+                       <img src="https://i.pinimg.com/564x/4a/92/11/4a9211f1f2cac5f16ed71dd15746499b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Groom' %}
+                       <img src="https://i.pinimg.com/564x/c2/84/0e/c2840e8e092eac0760951a0033bb4aec.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Oval' %}
+                       <img src="https://i.pinimg.com/564x/ff/53/42/ff534202a097ea1c2c1212e205a2defd.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Ray-Ban Clubmaster' %}
+                       <img src="https://i.pinimg.com/564x/10/9f/f8/109ff88f2b8dbb49e1a4d522df1fe9ab.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Vintage' %}
+                       <img src="https://i.pinimg.com/564x/39/12/71/3912717fe7136dc8b8bb02633054023f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Sunnies' %}
+                       <img src="https://i.pinimg.com/564x/d4/47/58/d447588e13a58832dee9647e2d50823d.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Men-Wallets-->
+
+                       {% elif i=='Exotic' %}
+                       <img src="https://i.pinimg.com/564x/e9/b7/0b/e9b70b63fd5e1afdb7a9a807dad2fde6.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Guy Laroche' %}
+                       <img src="https://i.pinimg.com/564x/8c/81/5d/8c815d1b81181bc512e2d6e4c351b5dd.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Leather Wallet' %}
+                       <img src="https://i.pinimg.com/564x/23/f9/ff/23f9ff4251aee0f4e3248a41d6aaa04c.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Billfold' %}
+                       <img src="https://i.pinimg.com/564x/8e/fe/4f/8efe4f4f7343f4c89285ba3d08f55307.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Bridle Leather' %}
+                       <img src="https://i.pinimg.com/564x/6b/c0/ae/6bc0aead1f326b943712e77119b89612.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Vintage Slim' %}
+                       <img src="https://i.pinimg.com/564x/2c/76/5c/2c765c898755096360448807167b2e05.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Men-Belts-->
+
+                       {% elif i=='Rori Leather Belt' %}
+                       <img src="https://i.pinimg.com/564x/ca/61/75/ca6175ef7b0ad9842a357143641568d1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Montblanc' %}
+                       <img src="https://i.pinimg.com/564x/eb/5d/ac/eb5dac506a68def95d6c49eb3abd545d.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Mabel' %}
+                       <img src="https://i.pinimg.com/564x/b2/bb/bd/b2bbbdbf9810e7c3d4712ed9ff75fef2.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Pikeur Stirrup' %}
+                       <img src="https://i.pinimg.com/564x/98/d1/ec/98d1ec132a5f94bfc8907afc8972621b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Pu Belt' %}
+                       <img src="https://i.pinimg.com/564x/80/43/9f/80439f44d6c1f2495a5d8aaede40d2e5.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Exotic Leather Belt' %}
+                       <img src="https://i.pinimg.com/564x/3c/d5/17/3cd5178d765a6cb96a87d3916e6a1935.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Men-Perfumes-->
+
+                       {% elif i=='Energizing' %}
+                       <img src="https://lcpshop.net/wp-content/uploads/2018/07/Ha134b1895bae4b24bddfd2991b6b62f6B.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Hunter' %}
+                       <img src="https://i.pinimg.com/564x/84/58/73/845873f231721b2e2518876a4c602368.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Clinique' %}
+                       <img src="https://i.pinimg.com/564x/9a/8c/f0/9a8cf09640ea30898dc8c9a33565a10a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Nivea' %}
+                       <img src="https://i.pinimg.com/564x/58/a2/d9/58a2d941a67c5e999cae86e46bef9f4b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Karin Herzog' %}
+                       <img src="https://i.pinimg.com/564x/14/00/5b/14005b5dd817915aaa34680cf8ca345b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='No7' %}
+                       <img src="https://i.pinimg.com/564x/63/ca/97/63ca974f682a045a8849b7e0793dfbbf.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Girls-->
+
+                       {% elif i=='BLUE SHARAR' %}
+                       <img src="https://i.pinimg.com/originals/aa/0d/04/aa0d041e1b9d15e81f296243556834ee.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='NAVY BLUE FROCK' %}
+                       <img src="https://cdn.babycouture.in/pub/media/catalog/product/cache/0b315228ed332efca91f606c91ba025b/h/2/h2daad871bd3045ad8d43cc6055081ce9m.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='YELLOW FROCK' %}
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3wDOw118VnhEFuUoGGN-EJNT7MChqTNsrmsORsaQvH6ogCTSIE6dYV6qeWUJNUTmYlE&usqp=CAU" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='JEANS AND TOP SET' %}
+                       <img src="https://5.imimg.com/data5/RU/HC/HD/SELLER-54152959/kids-girls-top-with-denim-jeans-500x500.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREEN LEHANGA' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0624/0701/6704/products/fayon-kids-green-printed-lehenga-choli-and-dupatta-for-girls-37508629659904.jpg?v=1659962703" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='COMFY NIGHT WEAR' %}
+                       <img src="https://img.tatacliq.com/images/i8/437Wx649H/MP000000014077845_437Wx649H_202208071929501.jpeg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Boys-->
+
+                       {% elif i=='LATEST THREE PIECE SET' %}
+                       <img src="https://www.okboss.co.in/assets/img/home/boysrow1/kids%20musterd%20jacket%20with%20white%20tshirt%20party%20wear%20dress.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='PARTY WEAR SUIT SET' %}
+                       <img src="https://i.pinimg.com/originals/67/44/c5/6744c52c25d08dba06a4d632d9224bbe.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='KURTA PAJAMA SET' %}
+                       <img src="https://assets0.mirraw.com/images/10456204/S-121_Cream_1_large_m.jpg?1655462131" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='JEANS AND SHIRT SET' %}
+                       <img src="https://m.media-amazon.com/images/I/710KRr+Q0kL._UL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE SUIT WITH KURTA PAJAMA' %}
+                       <img src="https://assets0.mirraw.com/images/6416704/637-BLUE-A_large_m.jpg?1537027985" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='COMFY NIGHT WEAR' %}
+                       <img src="https://m.media-amazon.com/images/I/61KMEEul2eL._UL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Footwear-->
+
+                       {% elif i=='WHITE PARTY WEAR SHOES' %}
+                       <img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300911336SILVER_2_800x.jpg?v=1668166617" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='SANDLES' %}
+                       <img src="https://cdn.fcglcdn.com/brainbees/images/products/438x531/9685286a.webp" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='MULTI COLOR SHOES' %}
+                       <img src="https://m.media-amazon.com/images/I/61HkxdsBSXL._UY500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='NAVY BLUE SHOES' %}
+                       <img src="https://i.pinimg.com/736x/ed/02/26/ed0226534c85feeec33cf209f4fc76cd.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BLUE AND BROWN SHOES' %}
+                       <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/kids-shoe/e/m/t/-original-imaghugtvkhzge7b.jpeg?q=70" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREY AND RED SANDLES' %}
+                       <img src="https://m.media-amazon.com/images/I/81moYlLSsRL._UL1500_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Toys-->
+
+                       {% elif i=='DANCING CACTUS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71BAdf6V32L._SX450_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='LITTLE RIDE MAGIC CAR' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51eH2cHnZGL._SX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='MINI ANIMAL TOYS' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71s0C7T1srL._SX466_.jpg"class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BUBBLE GUN' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51YifgGtH3L._SY450_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='FAST FOOD COOKING SET' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51hxhdqZFML._SX300_SY300_QL70_FMwebp_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='CLAY 12 colors' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71ryLAd0d7L._SY450_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Infants-->
+
+                       {% elif i=='INFANT DRESS WITH QUOTE' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41qcr7wooNL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='GREY SWEATER' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61kqhTCKtgL._SX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='SHIRT AND SHORT COMBO' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/512Fau61yGL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='HAND GLOVES' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/6140HlGzYmL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='FOOT WEAR' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41MPlA-+iuL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='HEAD CAP' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61bhaCUy5IL._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Kids-Accessories-->
+
+                       {% elif i=='FLORAL HAIR BAND' %}
+                       <img src="https://hunyhuny.com/3839-large_default/baby-girl-hairband-headband-lace-flower-off-white-newborn-infant-toddler.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BOW CLIPS' %}
+                       <img src="https://i.etsystatic.com/12407523/r/il/efd227/2931910944/il_fullxfull.2931910944_60k0.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BARBIE WATCH' %}
+                       <img src="https://cdn.shopclues.com/images1/thumbnails/98107/320/320/144535568-98107498-1653955089.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='SPIDER MAN CAP' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71ltPmUfy3L._UX679_.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='WRISTBAND' %}
+                       <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31-2Mt9DDEL.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='BEN 10 WATCH' %}
+                       <img src="https://n1.sdlcdn.com/imgs/j/o/g/Ben-10-watch-boys-watch-SDL068382407-1-8b4da.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Lamps-->
+
+                       {% elif i=='Stylish Floor Lamp' %}
+                       <img src="https://i.pinimg.com/564x/d5/61/ab/d561ab9a6a487ccd150678f1a86c7ded.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Designer lamp' %}
+                       <img src="https://i.pinimg.com/564x/ad/82/02/ad8202643c5724d66a475aa015c4e9df.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Outdoor Lanterns' %}
+                       <img src="https://i.pinimg.com/564x/cf/49/2b/cf492b24dacff2f57954540b9145e852.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Crystal Lamp' %}
+                       <img src="https://i.pinimg.com/564x/40/e7/6b/40e76bcb835dff96504e4ad160814265.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Moroccan' %}
+                       <img src="https://i.pinimg.com/564x/e0/27/c1/e027c1a56b635cf92f12e7a63a0c27a8.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Handcrafted' %}
+                       <img src="https://i.pinimg.com/564x/ba/49/b0/ba49b07c4380e8705759b7a34df724c6.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Home-Plants-->
+
+                       {% elif i=='Malus' %}
+                       <img src="https://i.pinimg.com/564x/2c/a3/e6/2ca3e6a39c134abe48903f561d51ff33.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Chandni' %}
+                       <img src="https://i.pinimg.com/564x/dc/36/94/dc36942bc822d1186b12f4007246750d.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Jasmine' %}
+                       <img src="https://i.pinimg.com/564x/8b/c0/76/8bc076acc24ef156d1a616fd2c81fbb5.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Candle Stick' %}
+                       <img src="https://i.pinimg.com/564x/0f/84/83/0f8483d6ee78ad49c03932dd38027ba5.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Aloe plant' %}
+                       <img src="https://i.pinimg.com/564x/0f/46/b5/0f46b5be15d2fb79ca978894a9c4f5ec.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Rose' %}
+                       <img src="https://i.pinimg.com/564x/3a/d5/fd/3ad5fdddb9da00cf2a1b95ec1791ca33.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Statues-->
+
+                       {% elif i=='Shiva' %}
+                       <img src="https://i.pinimg.com/564x/35/71/5c/35715ced0cba6ef727e3e5e6c854d96b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Lotus Throne' %}
+                       <img src="https://i.pinimg.com/564x/85/40/0f/85400fb3ed5f7f0a90216f9dd107b748.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Hanuman' %}
+                       <img src="https://i.pinimg.com/564x/41/56/81/415681d12f0a102af31f19c938745378.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Ganesha' %}
+                       <img src="https://i.pinimg.com/564x/17/1a/a7/171aa7f4b1a878c517f61b9291907720.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Sai Baba' %}
+                       <img src="https://i.pinimg.com/564x/12/88/27/1288278a8ba2e63ceda11bb594cccffe.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Buddha' %}
+                       <img src="https://i.pinimg.com/564x/33/bf/b1/33bfb1e60b817a87801dbc651240302f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Carpets-->
+
+                      {% elif i=='Wool Carpet' %}
+                       <img src="https://i.pinimg.com/564x/de/e4/2e/dee42e9e0951711c2245b2aaf8456344.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Cotton Carpet' %}
+                       <img src="https://i.pinimg.com/564x/75/5e/1a/755e1aa96ad22117af042c632dfd8646.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Polyster Carpet' %}
+                       <img src="https://i.pinimg.com/564x/da/39/06/da390639391e5b0fe656b66e1a9aa12f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Nodic Abstract Fluffy' %}
+                       <img src="https://i.pinimg.com/564x/13/52/98/1352987504a4f680c4fc18340ee13364.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Modern Area Rug Woolen' %}
+                       <img src="https://i.pinimg.com/564x/f3/57/7b/f3577b0c4d08604df7abb95b1d89378a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Home Made Carpet' %}
+                       <img src="https://i.pinimg.com/564x/d7/ba/80/d7ba80bc15992928d38e8e460d9cb4f7.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Organisers-->
+
+                       {% elif i=='Kitchen Organiser' %}
+                       <img src="https://i.pinimg.com/564x/98/99/1d/98991dc476b155ef9a94c91e50ea7e84.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Randal' %}
+                       <img src="https://i.pinimg.com/564x/16/a8/94/16a894c68565a48a6cb72004320deb03.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Crystal' %}
+                       <img src="https://i.pinimg.com/564x/44/6b/96/446b96ded353ab2927fc8a3a1da1877e.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Stackers' %}
+                       <img src="https://cdn.lisaangel.co.uk/image/cache/data/product-images/ss21/ld-ss21/stackers-classic-jewellery-box-lid-in-white-0v8a6088-620x620.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Hemoton Acry' %}
+                       <img src="https://i.pinimg.com/564x/44/c5/bc/44c5bccefae83b92d60595625f597a6a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Lipstick Organiser' %}
+                       <img src="https://i.pinimg.com/564x/ad/17/98/ad17986b46507697b48784400a7e2046.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Clock-->
+
+                       {% elif i=='Calico' %}
+                       <img src="https://i.pinimg.com/564x/49/76/01/497601250638b611370323551f359e25.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Analog Clock' %}
+                       <img src="https://i.pinimg.com/564x/19/9e/ff/199effb79ea39dbd6c9ea83882b7720f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Wall Decoration' %}
+                       <img src="https://i.pinimg.com/564x/85/f2/de/85f2deb462d4b4cc3440274c97b811ea.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Vintage Bicycle Clock' %}
+                       <img src="https://i.pinimg.com/564x/0e/8d/b1/0e8db1dc256308931d733c65e719ca18.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Vintage Alarm Clock' %}
+                       <img src="https://i.pinimg.com/564x/26/4e/75/264e755ca5d56b018a57c753165c40d6.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Wall Clock' %}
+                       <img src="https://i.pinimg.com/564x/54/2c/43/542c43e40d0bace306c409c943d6b40f.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Bedding-->
+
+                       {% elif i=='Euboea Acrylic Velvet' %}
+                       <img src="https://i.pinimg.com/564x/16/11/e7/1611e7fa349c48b796205713cf1433b1.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Deluxe Velvet' %}
+                       <img src="https://i.pinimg.com/564x/e2/57/ad/e257ad89b900443c83dc51d82ec6f8e6.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Nodric Double' %}
+                       <img src="https://i.pinimg.com/564x/33/15/fc/3315fca7df805fc437a3dc5596b12aba.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='High End Warm' %}
+                       <img src="https://i.pinimg.com/564x/c4/e2/89/c4e2897da9b40005aeb447da7b93d550.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Soft Rabbit Flannel' %}
+                       <img src="https://i.pinimg.com/564x/c6/69/28/c66928b12d93311f0d1a2b0b5ba29e8e.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Ab Sided' %}
+                       <img src="https://i.pinimg.com/564x/55/20/78/55207810ae91785394a6bbebed69937a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                       <!--Home-Doormats-->
+
+                       {% elif i=='Scraper' %}
+                       <img src="https://i.pinimg.com/564x/2b/c1/75/2bc17547bc334d6d809d12669b63e315.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Interior Mats' %}
+                       <img src="https://i.pinimg.com/564x/83/0d/99/830d996d64ec786db697e1fda03a881e.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Modern Leaves Door Mat' %}
+                       <img src="https://i.pinimg.com/564x/49/91/1b/49911b4363bcc766d072ad2502e4cb24.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Luna Moon Door Mat' %}
+                       <img src="https://i.pinimg.com/564x/4f/ed/e9/4fede953ef02d43737c295bfb2269ea7.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Nickel Door Mat' %}
+                       <img src="https://i.pinimg.com/564x/fd/30/61/fd3061eec8b2bacb74fb21267e66b70b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Anti-Static Mats' %}
+                       <img src="https://i.pinimg.com/564x/35/2a/92/352a926a48e35d0e5993e37aea87b16a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       
+                       <!--Home-Mirrors-->
+                       {% elif i=='Plane Mirror' %}
+                       <img src="https://i.pinimg.com/564x/74/67/13/7467132e9c8d1835850abf223b03e9ba.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Free Standing Full Length' %}
+                       <img src="https://i.pinimg.com/564x/1c/2d/2a/1c2d2a43ae320411ee368a363bc16a0b.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Cheval Full-Length Mirror' %}
+                       <img src="https://i.pinimg.com/564x/cf/ad/61/cfad611102ea2f47f7c4901b4f03dc45.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Over-The-Door Mirror' %}
+                       <img src="https://i.pinimg.com/564x/19/ea/97/19ea97089275638b067f5bfbd8c2823e.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Vanity Mirror' %}
+                       <img src="https://i.pinimg.com/564x/7f/b3/fb/7fb3fb5ce1c56fb5946da8eb999798fd.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+                       {% elif i=='Antique and Vintage Mirror' %}
+                       <img src="https://i.pinimg.com/564x/61/f8/f8/61f8f8ddf39c1ed9c0a769849393ce4a.jpg" class="fruitimage" alt=""><br>
+                       Product:{{i}} <br>
+                       Quantity:{{data[i][0]}}<br>
+                       Price:{{data[i][1]}}<br> 
+                       <button class="btn btn-warning">Buy Now</button><br> ----------------------------------------------------------------------------------------- <br>
+
+                  {% endif %} 
+                
+                {% endfor %}
+              </div>
+      </body>
+      </html>

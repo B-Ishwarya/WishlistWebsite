@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--layout-->
+        <div class="watchlay"> 
+          <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">Simplicity is the ultimate sophistication</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://i.pinimg.com/564x/de/e4/2e/dee42e9e0951711c2245b2aaf8456344.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">Wool Carpet<br>₹430</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='Wool Carpet',q=1,price=430)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/75/5e/1a/755e1aa96ad22117af042c632dfd8646.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Cotton Carpet<br>₹359</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Cotton Carpet',q=1,price=350)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/da/39/06/da390639391e5b0fe656b66e1a9aa12f.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Polyster Carpet<br>₹549</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Polyster Carpet',q=1,price=549)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/13/52/98/1352987504a4f680c4fc18340ee13364.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Nodic Abstract Fluffy<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Nodic Abstract Fluffy',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/f3/57/7b/f3577b0c4d08604df7abb95b1d89378a.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Modern Area Rug Woolen<br>₹759</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Modern Area Rug Woolen',q=2,price=759)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/d7/ba/80/d7ba80bc15992928d38e8e460d9cb4f7.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Home Made Carpet<br>₹190</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Home Made Carpet',q=1,price=190)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+            </div>
+              
+              
+              <a href="{{url_for('house')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

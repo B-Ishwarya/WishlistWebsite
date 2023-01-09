@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perrfumes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--layout-->
+        <div class="watchlay"> 
+          <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">A perfume is an intimate object, it is the reflector of the heart.😎</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://n3.sdlcdn.com/imgs/d/c/q/Nautica-Blue-Edt-Perfume-100-1536221-1-cc343.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">Nautica  PERFUME 350ml<br>₹1590</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='Nautica  PERFUME ',q=350,price=1590)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://th.bing.com/th/id/OIP.ljQPIzuK6XiC8irWq1naBwHaHS?pid=ImgDet&rs=1" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Gucci Guilty PERFUME 350ml<br>₹799</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Gucci Guilty PERFUME',q=350,price=799)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/1d/80/9f/1d809f0795750472fbe5180064b083f5.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Guess Seductive Homme 100ml<br>2520</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Guess Seductive Homme',q=100,price=2520)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://www.eromman.com/images/detailed/825/yunsDiqN1569396630.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Ulric de Varens perfume 300ml<br>₹995</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Ulric de Varens perfume',q=300,price=995)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://n3.sdlcdn.com/imgs/j/p/p/Villain-Hydra-Perfume-Eau-De-SDL840573630-1-36287.jpeg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Villain 100ml<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Villain',q=100,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://th.bing.com/th/id/OIP.J0hkPI1kWHkf5oLTNHpF3QHaF6?pid=ImgDet&rs=1" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Jaguar 100ml<br>₹699</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Jaguar',q=100,price=699)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+            </div>
+              
+              
+              <a href="{{url_for('men')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

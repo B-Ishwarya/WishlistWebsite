@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Sunglasses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+          
+        <!--layout-->
+        <div class="watchlay"> 
+          <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">Sunglasses always hide a multitude of sins</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://i.pinimg.com/564x/4a/92/11/4a9211f1f2cac5f16ed71dd15746499b.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">Wayfarer Sunglasses<br>₹190</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='Wayfarer Sunglasses',q=1,price=190)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/c2/84/0e/c2840e8e092eac0760951a0033bb4aec.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Groom<br>₹120</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Groom',q=1,price=120)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/ff/53/42/ff534202a097ea1c2c1212e205a2defd.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Oval<br>₹210</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Oval',q=1,price=210)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/10/9f/f8/109ff88f2b8dbb49e1a4d522df1fe9ab.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Ray-Ban Clubmaster<br>₹199</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Ray-Ban Clubmaster',q=1,price=199)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/39/12/71/3912717fe7136dc8b8bb02633054023f.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Vintage<br>₹299</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Vintage',q=2,price=299)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/d4/47/58/d447588e13a58832dee9647e2d50823d.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Sunnies<br>₹199</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Sunnies',q=1,price=199)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+            </div>
+              
+              
+              <a href="{{url_for('men')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

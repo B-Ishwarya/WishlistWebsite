@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Wear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--layout-->
+        <div class="westlay"> 
+          <h1 class="ethnicheadfirst">In order to be irreplaceable, one must always be different</h1>
+          <h1 style="color: white;text-align: center;font-family: 'Times New Roman', Times, serif;">Shop in <b><i>wishlist</i></b> and be irreplaceable</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://images.bewakoof.com/t640/women-s-blue-washed-slim-fit-high-waist-jeans-339746-1656182348-1.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">DARK NAVY BLUE JEANS<br>₹1,999</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='DARK NAVY BLUE JEANS',q=1,price=1999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://m.media-amazon.com/images/I/61xwpQmhzXL._UX569_.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">ICE BLUE JEANS<br>₹2,599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='ICE BLUE JEANS',q=1,price=2599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11035316/2019/12/12/db88ac98-9ac6-4a3c-a974-ff459c04613c1576140065411-DOLCE-CRUDO-Women-Blue-Skinny-Fit-High-Rise-Clean-Look-Stret-1.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">BLUE JEANS<br>₹999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='BLUE JEANS',q=1,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/top/4/1/o/xs-tr-19-brijam-original-imageg7hfcegdujb.jpeg?q=70" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">BOTTLE GEEN SHORT TOP<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='BOTTLE GEEN SHORT TOP',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://rukminim1.flixcart.com/image/612/612/klphn680/top/n/5/x/xl-regular-top-fab-star-original-imagyry2geb5ztzq.jpeg?q=70" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">PEACH COLOR SHORT TOP<br>₹799</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='PEACH COLOR SHORT TOP',q=1,price=799)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kxz0pe80/top/c/z/e/l-wl-5001-sky-blue-l-wedani-original-imagab5uyjmgjxhh.jpeg?q=70" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">BLUE FLORAL TOP<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='BLUE FLORAL TOP',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex justify-content-center">
+              <div class="ethniccard">
+                <img src="https://images.meesho.com/images/products/166874695/a6bra_512.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">RED FROCK<br>₹899</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='RED FROCK',q=1,price=899)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://5.imimg.com/data5/OF/DT/MY-43371451/denim-girls-jacket-500x500.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">BLUE DENIM JACKET<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='BLUE DENIM JACKET',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://5.imimg.com/data5/ANDROID/Default/2020/10/BH/OL/LA/77170183/product-jpeg-500x500.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">LIGHT BLUE DENIM JACKET<br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='LIGHT BLUE DENIM JACKET',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300913827ROYALBLUE_2_1024x1024.jpg?v=1664462186" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">DARK BLUE PLEATED SKIRT<br>₹999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='DARK BLUE PLEATED SKIRT',q=1,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://img3.junaroad.com/uiproducts/18213411/pri_175_p-1641976549.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">BROWN RUFFLED LAYER SKIRT<br>₹9,999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='BROWN RUFFLED LAYER SKIRT',q=1,price=9999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20210727/cfJQ/60ffd76daeb269a9e355bc25/-473Wx593H-462685540-green-MODEL.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">GREEN JAIPURI PRINT SKIRT<br>₹799</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='GREEN JAIPURI PRINT SKIRT',q=1,price=799)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              </div>
+              <a href="{{url_for('women')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

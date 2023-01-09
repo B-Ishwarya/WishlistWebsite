@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="Vegetable">
+         <!--Nav Bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                </li>
+
+                <!--Dropdown-->
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                  </ul>
+                </div>
+                
+                <li class="nav-item" >
+                  <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--layout-->
+        <div class="carelay"> 
+          <div class="d-flex flex-row justify-content-center">
+              <div class="vegcard">
+                  <img src="https://newassets.apollo247.com/pub/media/catalog/product/9/0/908_daber_paste_200g_ecom_1000x1000.jpg" class="fruitimage" alt="">
+                  <h1 class="fruitheading">DABUR RED TOOTH PASTE</h1>
+                  <p class="frui"><i>₹110 / 200g</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='DABUR RED TOOTH PASTE',q=200,price=110)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/61nctAojOEL._SL1000_.jpg" class="fruitimage" alt="">
+                <h1 class="fruitheading">COLGATE TOOTH PASTE</h1>
+                <p class="frui"><i>₹250 / pack of 2</i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='COLGATE TOOTH PASTE',q=2,price=250)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/51hfniQPHSL._SL1000_.jpg" class="fruitimage" alt="">
+                <h1 class="fruitheading">REXONA SOAP</h1>
+                <p class="frui"><i>₹150 / pack of 4</i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='REXONA SOAP',q=4,price=150)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/514F8mN8NgL._SL1500_.jpg" class="fruitimage" alt="">
+                <h1 class="fruitheading">AMBIPUR</h1>
+                <p class="frui"><i>₹280 / pack of 1</i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='AMBIPUR',q=1,price=280)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+                </div>
+              <div class="vegcard">
+                  <img src="https://www.jiomart.com/images/product/600x600/491390879/dettol-original-soap-75-g-pack-of-4-product-images-o491390879-p491390879-0-202203150038.jpg" class="fruitimage" >
+                  <h1 class="fruitheading">DETTOL SOAP</h1>
+                  <p class="frui"><i>₹150 / pack of 4</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='DETTOL SOAP',q=4,price=150)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>                  </div>
+              <div class="vegcard">
+                  <img src="https://m.media-amazon.com/images/I/61NReC378wL._SL1000_.jpg"class="fruitimage" alt="">
+                  <h1 class="fruitheading">DETTOL HAND WASH</h1>
+                  <p class="frui"><i>₹80 / 250ml</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='DETTOL HAND WASH',q=250,price=80)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>                 
+                 </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="vegcard">
+                  <img src="https://5.imimg.com/data5/NM/CG/ZI/SELLER-37093038/dettol-antiseptic-liquid-500x500.jpg"class="fruitimage" alt="">
+                  <h1 class="fruitheading">DETTOL LIQUID</h1>
+                  <p class="frui"><i>₹200/ 500ml</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='DETTOL LIQUID',q=500,price=200)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>                  
+                </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/81fjIPmrakL._SL1500_.jpg"class="fruitimage" alt="">
+                <h1 class="fruitheading">TIDE SURF</h1>
+                <p class="frui"><i>₹260 / 1kg</i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='TIDE SURF',q=1,price=260)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/61ysR0hSLhL._SY450_.jpg"class="fruitimage" alt="">
+                <h1 class="fruitheading">COMFORT CONDITIONER</h1>
+                <p class="frui"><i>₹120 / 430ml</i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='COMFORT CONDITIONER',q=430,price=120)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                <img src="https://m.media-amazon.com/images/I/61szrCRWOEL._SL1000_.jpg"class="fruitimage" alt="">
+                <h1 class="fruitheading">VIM SOAP BAR</h1>
+                <p class="frui"><i>₹120/ pack of 12 </i></p>
+                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='VIM SOAP BAR',q=12,price=120)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                  <img src="https://asset20.ckassets.com/resources/image/ckseller/CKS-Shampoo-000093_1-1625501814.jpg"class="fruitimage" alt="">
+                  <h1 class="fruitheading">NYLE SHAMPOO</h1>
+                  <p class="frui"><i>₹100 / 180ml</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='NYLE SHAMPOO',q=180,price=100)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              <div class="vegcard">
+                  <img src="https://www.jiomart.com/images/product/original/490003892/pantene-pro-v-hair-fall-control-shampoo-340-ml-product-images-o490003892-p490003892-0-202203150028.jpg" class="fruitimage" alt="">
+                  <h1 class="fruitheading">PANTENE SHAMPOO</h1>
+                  <p class="frui"><i>₹350 / 340ml</i></p>
+                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='PANTENE SHAMPOO',q=340,price=350)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>    
+              </div>
+              </div>
+              <a href="grocery.html"><button class="btn btn-success">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

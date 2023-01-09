@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+</head>
+<body>
+    <div class="ethnic">
+        
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{url_for('homepage')}}"><img src="https://cdn.shopify.com/app-store/listing_images/f9b5dcbc1507320fe2b951c142bbc83c/icon/CISuhaj0lu8CEAE=.png" class="pic1"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('homepage')}}"><button class="btn btn-outline-success">Home</button></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('grocery')}}"><button class="btn btn-outline-success">Grocery</button></a>
+                  </li>
+
+                  <!--Dropdown-->
+                  <div class="dropdown">
+                    <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="{{url_for('women')}}">Women</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('men')}}">Men</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('kids')}}">Kids</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
+                    </ul>
+                  </div>
+                  
+                  <li class="nav-item" >
+                    <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('welcome')}}"><button class="btn btn-danger">Log Out</button></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!--layout-->
+        <div class="watchlay"> 
+          <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">Confidence, is like a belt worn around the waist</h1>
+          <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                  <img src="https://i.pinimg.com/564x/ca/61/75/ca6175ef7b0ad9842a357143641568d1.jpg" class="ethnicimage" alt="">
+                  <h1 class="ethnicheading">Rori Leather Belt<br>₹699</h1>
+                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <a href="{{url_for('cart',name='Rori Leather Belt',q=1,price=699)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/eb/5d/ac/eb5dac506a68def95d6c49eb3abd545d.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Montblanc<br>₹1099</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Montblanc',q=2,price=1099)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/b2/bb/bd/b2bbbdbf9810e7c3d4712ed9ff75fef2.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Mabel<br>₹999</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Mabel',q=1,price=99)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div></div>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/98/d1/ec/98d1ec132a5f94bfc8907afc8972621b.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Pikeur Stirrup<br>₹1000</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Pikeur Stirrup',q=2,price=1000)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/80/43/9f/80439f44d6c1f2495a5d8aaede40d2e5.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Pu Belt 3Pcs <br>₹599</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Pu Belt',q=3,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+              </div>
+              <div class="ethniccard">
+                <img src="https://i.pinimg.com/564x/3c/d5/17/3cd5178d765a6cb96a87d3916e6a1935.jpg" class="ethnicimage" alt="">
+                <h1 class="ethnicheading">Exotic Leather Belt<br>₹1059</h1>
+                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <a href="{{url_for('cart',name='Exotic Leather Belt',q=2,price=1059)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
+            </div>
+            </div>
+              
+              
+              <a href="{{url_for('men')}}"><button class="btn btn-warning">Previous</button></a>
+              
+              
+          </div>
+          
+      </div>
+      
+    </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
