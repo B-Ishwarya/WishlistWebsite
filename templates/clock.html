@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethnic Wear</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="ethnic">
@@ -49,56 +49,56 @@
             </div>
           </nav>
         <!--layout-->
-        <div class="watchlay"> 
+        <div class="watchlay">
           <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">The clock never stops, never waits.</h1>
           <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                   <img src="https://i.pinimg.com/564x/49/76/01/497601250638b611370323551f359e25.jpg" class="ethnicimage" alt="">
                   <h1 class="ethnicheading">Calico<br>₹679</h1>
-                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="ethnicpara"><a href="{{url_for('pay',name='Calico',q=1,price=679)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='Calico',q=1,price=679)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
                 </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/19/9e/ff/199effb79ea39dbd6c9ea83882b7720f.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Analog Clock<br>₹235</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Analog Clock',q=1,price=235)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Analog Clock',q=1,price=235)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/85/f2/de/85f2deb462d4b4cc3440274c97b811ea.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Wall Decoration<br>₹579</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Wall Decoration',q=1,price=579)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Wall Decoration',q=1,price=579)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/0e/8d/b1/0e8db1dc256308931d733c65e719ca18.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Vintage Bicycle Clock<br>₹459</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Vintage Bicycle Clock',q=1,price=459)}}"><button class="btn btn-warning">BUY NOW</button></p>
                 <a href="{{url_for('cart',name='Vintage Bicycle Clock',q=1,price=459)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/26/4e/75/264e755ca5d56b018a57c753165c40d6.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Vintage Alarm Clock<br>₹237</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Vintage Alarm Clock',q=1,price=237)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Vintage Alarm Clock',q=1,price=237)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/54/2c/43/542c43e40d0bace306c409c943d6b40f.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Wall Clock<br>₹399</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Wall Clock',q=1,price=399)}}"><<button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Wall Clock',q=1,price=399)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
             </div>
-              
-              
+
+
               <a href="{{url_for('house')}}"><button class="btn btn-warning">Previous</button></a>
-              
-              
+
+
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="ethnic">
@@ -38,7 +38,7 @@
                     <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
                   </ul>
                 </div>
-               
+
                 <li class="nav-item" >
                   <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
                 </li>
@@ -50,56 +50,56 @@
           </div>
         </nav>
         <!--layout-->
-        <div class="watchlay"> 
+        <div class="watchlay">
           <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">Good art is in the wallet of the beholder</h1>
           <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                   <img src="https://i.pinimg.com/564x/e9/b7/0b/e9b70b63fd5e1afdb7a9a807dad2fde6.jpg" class="ethnicimage" alt="">
                   <h1 class="ethnicheading">Exotic<br>₹999</h1>
-                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="ethnicpara"><a href="{{url_for('pay',name='Exotic',q=2,price=999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='Exotic',q=2,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/8c/81/5d/8c815d1b81181bc512e2d6e4c351b5dd.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Guy Laroche<br>₹1099</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Guy Laroche',q=2,price=1099)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Guy Laroche',q=2,price=1099)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/23/f9/ff/23f9ff4251aee0f4e3248a41d6aaa04c.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Leather Wallet<br>₹499</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Leather Wallet',q=1,price=499)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Leather Wallet',q=1,price=499)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/8e/fe/4f/8efe4f4f7343f4c89285ba3d08f55307.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Billfold<br>₹999</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara">a href="{{url_for('pay',name='Billfold',q=2,price=999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Billfold',q=2,price=999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/6b/c0/ae/6bc0aead1f326b943712e77119b89612.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Bridle Leather<br>₹399</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Bridle Leather',q=1,price=399)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Bridle Leather',q=1,price=399)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/2c/76/5c/2c765c898755096360448807167b2e05.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Vintage Slim<br>₹699</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Vintage Slim',q=1,price=699)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Vintage Slim',q=1,price=699)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
             </div>
-              
-              
+
+
               <a href="{{url_for('men')}}"><button class="btn btn-warning">Previous</button></a>
-              
-              
+
+
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

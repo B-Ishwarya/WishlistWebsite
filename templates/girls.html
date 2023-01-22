@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gils Clothing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="ethnic">
@@ -38,7 +38,7 @@
                     <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
                   </ul>
                 </div>
-                
+
                 <li class="nav-item" >
                   <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
                 </li>
@@ -50,56 +50,56 @@
           </div>
         </nav>
         <!--layout-->
-        <div class="watchlay"> 
+        <div class="watchlay">
           <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">Good clothing is a passport for happiness</h1>
           <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                   <img src="https://i.pinimg.com/originals/aa/0d/04/aa0d041e1b9d15e81f296243556834ee.jpg" class="ethnicimage" alt="">
                   <h1 class="ethnicheading">BLUE SHARAR<br>₹2,999</h1>
-                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="ethnicpara"><a href="{{url_for('pay',name='BLUE SHARAR',q=1,price=2999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='BLUE SHARAR',q=1,price=2999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://cdn.babycouture.in/pub/media/catalog/product/cache/0b315228ed332efca91f606c91ba025b/h/2/h2daad871bd3045ad8d43cc6055081ce9m.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">NAVY BLUE FROCK<br>₹2,999</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='NAVY BLUE FROCK',q=1,price=2999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='NAVY BLUE FROCK',q=1,price=2999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
             </div>
               <div class="ethniccard">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3wDOw118VnhEFuUoGGN-EJNT7MChqTNsrmsORsaQvH6ogCTSIE6dYV6qeWUJNUTmYlE&usqp=CAU" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">YELLOW FROCK<br>₹3,999</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='YELLOW FROCK',q=1,price=3999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='YELLOW FROCK',q=1,price=3999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                 <img src="https://5.imimg.com/data5/RU/HC/HD/SELLER-54152959/kids-girls-top-with-denim-jeans-500x500.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">JEANS AND TOP SET<br>₹1,999</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='JEANS AND TOP SET',q=1,price=1999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='JEANS AND TOP SET',q=1,price=1999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://cdn.shopify.com/s/files/1/0624/0701/6704/products/fayon-kids-green-printed-lehenga-choli-and-dupatta-for-girls-37508629659904.jpg?v=1659962703" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">GREEN LEHANGA<br>₹2,999</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='GREEN LEHANGA',q=1,price=2999)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='GREEN LEHANGA',q=1,price=2999)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://img.tatacliq.com/images/i8/437Wx649H/MP000000014077845_437Wx649H_202208071929501.jpeg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">COMFY NIGHT WEAR<br>₹599</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='COMFY NIGHT WEAR',q=1,price=599)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='COMFY NIGHT WEAR',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
             </div>
-              
-              
+
+
               <a href="{{url_for('kids')}}"><button class="btn btn-warning">Previous</button></a>
-              
-              
+
+
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

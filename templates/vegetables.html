@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegetables</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="Vegetable">
@@ -38,7 +38,7 @@
                     <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
                   </ul>
                 </div>
-                
+
                 <li class="nav-item" >
                   <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
                 </li>
@@ -50,48 +50,48 @@
           </div>
         </nav>
         <!--layout-->
-        <div class="veglay"> 
+        <div class="veglay">
           <div class="d-flex flex-row justify-content-center">
               <div class="vegcard">
                   <img src="https://m.economictimes.com/thumb/msid-95423731,width-1200,height-900,resizemode-4,imgsize-56196/tomatoes-canva.jpg" class="fruitimage" alt="">
                   <h1 class="fruitheading">TOMATO</h1>
                   <p class="frui"><i>₹30 / 1kg</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='TOMATO',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='TOMATO',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg" class="fruitimage" alt="">
                 <h1 class="fruitheading">POTATO</h1>
                 <p class="frui"><i>₹35 / 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='POTATO',q=1,price=35)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='POTATO',q=1,price=35)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.macmillandictionary.com/external/slideshow/full/135967_full.jpg" class="fruitimage" alt="">
                 <h1 class="fruitheading">ONION</h1>
                 <p class="frui"><i>₹30/ 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='ONION',q=1,price=30)}}"></a><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='ONION',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://smartyield.in/wp-content/uploads/2021/06/Big-brinjal-eggplant.png" class="fruitimage" alt="">
                 <h1 class="fruitheading">BRINJAL</h1>
                 <p class="frui"><i>₹100 / 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='BRINJAL',q=1,price=100)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='BRINJAL',q=1,price=100)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://www.eatrightbasket.com/wp-content/uploads/2019/02/SS_Veg_26.jpg" class="fruitimage" >
                   <h1 class="fruitheading">CABBAGE</h1>
                   <p class="frui"><i>₹20 / 1Pc</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='CABBAGE',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='CABBAGE',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://m.media-amazon.com/images/I/91EdPVzD99L._SL1500_.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">CAULIFLOWER</h1>
                   <p class="frui"><i>₹20 / 1Pc</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='CAULIFLOWER',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='CAULIFLOWER',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
@@ -99,97 +99,97 @@
                   <img src="https://t4.ftcdn.net/jpg/02/87/25/37/360_F_287253716_I1seSRet5pt8YGBRRcTbPPV1WesM00n9.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">CAPSICUM</h1>
                   <p class="frui"><i>₹50/ 1kg</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='CAPSICUM',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='CAPSICUM',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="http://cdn.shopify.com/s/files/1/0451/1101/7626/products/biggreenchilliseeds.jpg?v=1606738066"class="fruitimage" alt="">
                 <h1 class="fruitheading">GREEN CHILLI</h1>
                 <p class="frui"><i>₹40 / 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='GREEN CHILLI',q=1,price=40)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='GREEN CHILLI',q=1,price=40)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.jiomart.com/images/product/600x600/590003548/cucumber-500-g-product-images-o590003548-p590003548-0-202203152002.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">CUCUMBER</h1>
                 <p class="frui"><i>₹30 / 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='CUCUMBER',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='CUCUMBER',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="http://cdn.shopify.com/s/files/1/0451/1101/7626/products/bottlegourdseeds.jpg?v=1603963208"class="fruitimage" alt="">
                 <h1 class="fruitheading">BOTTLE GOURD</h1>
                 <p class="frui"><i>₹20 / 1kg</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='BOTTLE GOURD',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='BOTTLE GOURD',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://cdn.shopify.com/s/files/1/0273/5551/2875/products/Bitter_1_720x.jpg?v=1591173729"class="fruitimage" alt="">
                   <h1 class="fruitheading">BITTER GOURD</h1>
                   <p class="frui"><i>₹60 / 1kg</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='BITTER GOURD',q=1,price=60)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='BITTER GOURD',q=1,price=60)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="http://cdn.shopify.com/s/files/1/1380/2059/products/Peas_grande.jpg?v=1598082087" class="fruitimage" alt="">
                   <h1 class="fruitheading">PEAS </h1>
                   <p class="frui"><i>₹40 / 1kg</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='PEAS',q=1,price=40)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='PEAS',q=1,price=40)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               </div>
               <h1 class="leaf"><mark class="leafy"><i><u>Leafy Vegetables:</u></i></mark></h1>
               <div class="d-flex flex-row justify-content-center">
-                
+
               <div class="vegcard">
                   <img src="https://m.media-amazon.com/images/I/413AzNlAeoL._SX466_.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">SPINACH</h1>
                   <p class="frui"><i>₹30 / 1bunch</i></p>
-                    <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                    <p class="vegpara"><a href="{{url_for('pay',name='SPINACH',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                     <a href="{{url_for('cart',name='SPINACH',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://rukminim1.flixcart.com/image/416/416/ke7ff680/plant-seed/g/r/e/120-coriander-seeds-xll-254-vibex-original-imafuxaay4zyer9v.jpeg?q=70"class="fruitimage" alt="">
                 <h1 class="fruitheading">CORIANDER</h1>
                 <p class="frui"><i>₹20 / 1bunch</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='CORIANDER',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='CORIANDER',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/266128_2200-732x549.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">MINT</h1>
                 <p class="frui"><i>₹25 / 1bunch</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='MINT',q=1,price=25)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='MINT',q=1,price=25)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.bigbasket.com/media/uploads/p/xxl/20000981_7-fresho-spring-onion-with-roots.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">SPRING ONIONS</h1>
                 <p class="frui"><i>₹30 / 1bunch</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='SPRING ONIONS',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='SPRING ONIONS',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://5.imimg.com/data5/SELLER/Default/2020/12/BJ/JX/JD/80466074/fenugreek-leaves-500x500.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">FENUGREEK LEAVES</h1>
                   <p class="frui"><i>₹20 / 1bunch</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='FENUGREEK LEAVES ',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='FENUGREEK LEAVES ',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://secureservercdn.net/50.62.174.80/l2h.079.myftpupload.com/wp-content/uploads/2018/08/gongura.png?time=1666892010"class="fruitimage" alt="">
                 <h1 class="fruitheading">GONGURA</h1>
                 <p class="frui"><i>₹30 / 1bunch</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='GONGURA',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='GONGURA',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
-             
+
               </div>
-              <a href="grocery.html"><button class="btn btn-success">Previous</button></a>
+              <a href="{{url_for('grocery')}}"><button class="btn btn-success">Previous</button></a>
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

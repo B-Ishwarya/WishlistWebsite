@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snacks</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="Vegetable">
@@ -38,7 +38,7 @@
                     <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
                   </ul>
                 </div>
-                
+
                 <li class="nav-item" >
                   <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
                 </li>
@@ -50,48 +50,48 @@
           </div>
         </nav>
         <!--layout-->
-        <div class="snacklay"> 
+        <div class="snacklay">
           <div class="d-flex flex-row justify-content-center">
               <div class="vegcard">
                   <img src="http://www.jaindryfruits.com/image/cache/catalog/Berry/md7-800x800-product_popup.jpg" class="fruitimage" alt="">
                   <h1 class="fruitheading">MIX DRYFRUITS PACK</h1>
                   <p class="frui"><i>₹350 / 250g</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='MIX DRYFRUITS PACK',q=250,price=350)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='MIX DRYFRUITS PACK',q=250,price=350)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.jiomart.com/images/product/original/490000331/lay-s-magic-masala-potato-chips-52-g-product-images-o490000331-p490000331-0-202203150844.jpg" class="fruitimage" alt="">
                 <h1 class="fruitheading">LAYS</h1>
                 <p class="frui"><i>₹50 / 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='LAYS',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='LAYS',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://www.bigbasket.com/media/uploads/p/xxl/1205616-2_1-kurkure-namkeen-masala-munch.jpg" class="fruitimage" alt="">
                 <h1 class="fruitheading">KURKURE</h1>
                 <p class="frui"><i>₹50/ 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='KURKURE',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='KURKURE',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://m.media-amazon.com/images/I/81tzFgAzZBL._SL1500_.jpg" class="fruitimage" alt="">
                 <h1 class="fruitheading">BINGO</h1>
                 <p class="frui"><i>₹50 / 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='BINGO',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='BINGO',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://m.media-amazon.com/images/I/41Mv0-eaFUL.jpg" class="fruitimage" >
                   <h1 class="fruitheading">HIDE AND SEEK</h1>
                   <p class="frui"><i>₹30 / 1pack</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='HIDE AND SEEK',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='HIDE AND SEEK',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://5.imimg.com/data5/SC/AK/LJ/SELLER-19591746/cadbury-oreo-vanilla-creme-biscuit-50gm-mrp-rs-10-1000x1000.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">OREO</h1>
                   <p class="frui"><i>₹30 / 1pack</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='OREO',q=1,price=30)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='OREO',q=1,price=30)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
@@ -99,52 +99,52 @@
                   <img src="https://cdn.shopify.com/s/files/1/0435/3559/7720/products/e469d455-dfaf-48a4-b191-24c280d2b9ab_1000x.jpg?v=1600490101"class="fruitimage" alt="">
                   <h1 class="fruitheading">DORITOS</h1>
                   <p class="frui"><i>₹50/ 1pack</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='DORITOS',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='DORITOS',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://m.media-amazon.com/images/I/61FQgF6lLRL._SX679_.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">5 STAR</h1>
                 <p class="frui"><i>₹20 / 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='5 STAR',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='5 STAR',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://m.media-amazon.com/images/I/61-o6tGXBmL._SX522_.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">DAIRY MILK</h1>
                 <p class="frui"><i>₹50 / 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='DAIRY MILK',q=1,price=50)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='DAIRY MILK',q=1,price=50)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                 <img src="https://m.media-amazon.com/images/I/71XCogOzuTL._SL1500_.jpg"class="fruitimage" alt="">
                 <h1 class="fruitheading">KITKAT</h1>
                 <p class="frui"><i>₹20 / 1pack</i></p>
-                <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="vegpara"><a href="{{url_for('pay',name='KITKAT',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='KITKAT',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://www.bigbasket.com/media/uploads/p/l/40122238_9-milkybar-white-chocolate-creamy.jpg"class="fruitimage" alt="">
                   <h1 class="fruitheading">MILKY BAR</h1>
                   <p class="frui"><i>₹20 / 1pack</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='MILKY BAR',q=1,price=20)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='MILKY BAR',q=1,price=20)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="vegcard">
                   <img src="https://m.media-amazon.com/images/I/51u7Y9k3EWL.jpg" class="fruitimage" alt="">
                   <h1 class="fruitheading">PARLE G</h1>
                   <p class="frui"><i>₹70 / 1pack</i></p>
-                  <p class="vegpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="vegpara"><a href="{{url_for('pay',name='PARLE G',q=1,price=70)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='PARLE G',q=1,price=70)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               </div>
-              <a href="grocery.html"><button class="btn btn-success">Previous</button></a>
-              
-              
+              <a href="{{url_for('grocery')}}"><button class="btn btn-success">Previous</button></a>
+
+
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

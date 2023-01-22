@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Door Mats</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">  
+    <link rel="stylesheet" href="{{url_for('static',filename='/starting.css')}}">
 </head>
 <body>
     <div class="ethnic">
@@ -38,7 +38,7 @@
                     <li><a class="dropdown-item" href="{{url_for('house')}}">Home Needs</a></li>
                   </ul>
                 </div>
-                
+
                 <li class="nav-item" >
                   <a class="nav-link" href="{{url_for('view')}}"><button class="btn btn-outline-success">&#128722 Cart</button></a>
                 </li>
@@ -50,55 +50,55 @@
           </div>
         </nav>
         <!--layout-->
-        <div class="watchlay"> 
+        <div class="watchlay">
           <h1 style="text-align: center;color: white;font-family: 'Times New Roman', Times, serif;padding-top: 20px;">The altar cloth of one aeon is the doormat of the next</h1>
           <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                   <img src="https://i.pinimg.com/564x/2b/c1/75/2bc17547bc334d6d809d12669b63e315.jpg" class="ethnicimage" alt="">
                   <h1 class="ethnicheading">Scraper<br>₹630</h1>
-                  <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                  <p class="ethnicpara"><a href="{{url_for('pay',name='Scraper',q=1,price=630)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                   <a href="{{url_for('cart',name='Scraper',q=1,price=630)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/83/0d/99/830d996d64ec786db697e1fda03a881e.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Interior Mats<br>₹699</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Interior Mats',q=1,price=699)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Interior Mats',q=1,price=699)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/49/91/1b/49911b4363bcc766d072ad2502e4cb24.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Modern Leaves Door Mat<br>₹450</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Modern Leaves Door Mat',q=1,price=450)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Modern Leaves Door Mat',q=1,price=450)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
               <div class="d-flex flex-row justify-content-center">
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/4f/ed/e9/4fede953ef02d43737c295bfb2269ea7.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Luna Moon Door Mat<br>₹350</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Luna Moon Door Mat',q=1,price=350)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Luna Moon Door Mat',q=1,price=350)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/fd/30/61/fd3061eec8b2bacb74fb21267e66b70b.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Nickel Door Mat<br>₹389</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Nickel Door Mat',q=1,price=389)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Nickel Door Mat',q=1,price=389)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div>
               <div class="ethniccard">
                 <img src="https://i.pinimg.com/564x/35/2a/92/352a926a48e35d0e5993e37aea87b16a.jpg" class="ethnicimage" alt="">
                 <h1 class="ethnicheading">Anti-Static Mats<br>₹599</h1>
-                <p class="ethnicpara"><button class="btn btn-warning">BUY NOW</button></p>
+                <p class="ethnicpara"><a href="{{url_for('pay',name='Anti-Static Mats',q=1,price=599)}}"><button class="btn btn-warning">BUY NOW</button></a></p>
                 <a href="{{url_for('cart',name='Anti-Static Mats',q=1,price=599)}}"><p class="fruitpara"><button class="btn btn-warning">Add to cart &#128722</button></p></a>
               </div></div>
-              
-              
+
+
               <a href="{{url_for('house')}}"><button class="btn btn-warning">Previous</button></a>
-              
-              
+
+
           </div>
-          
+
       </div>
-      
+
     </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

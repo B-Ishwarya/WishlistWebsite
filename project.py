@@ -1,16 +1,16 @@
 from flask import Flask,flash,redirect,render_template,url_for,request,jsonify,session
 from flask_session import Session
+import stripe
 from flask_mysqldb import MySQL
-stripe.api_key="sk_test_4eC39HqLyjWDarjtT1zdp7dc"
 app=Flask(__name__)
+stripe.api_key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
 
 app.secret_key='hello'
 app.config['SESSION_TYPE'] = 'filesystem'
-
-app.config['MYSQL_HOST'] ='localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD']='Bisshwarya@05'
-app.config['MYSQL_DB']='website'
+app.config['MYSQL_HOST'] ='BIshwarya.mysql.pythonanywhere-services.com'
+app.config['MYSQL_USER'] = 'BIshwarya'
+app.config['MYSQL_PASSWORD']='Bhavani@05'
+app.config['MYSQL_DB']='BIshwarya$website'
 mysql=MySQL(app)
 Session(app)
 @app.route('/')
@@ -36,6 +36,7 @@ def cart(name,q,price):
         session['cart'][name]=[q,price]
         session.modify=True
         return render_template('starting.html',id1=session['name'])
+
 @app.route('/cartdisplay')
 def view():
     print(session['cart'])
@@ -43,8 +44,8 @@ def view():
     return render_template('cart.html',data=data)
 @app.route('/login',methods=['GET','POST'])
 def login():
-    if session['name']:
-        return redirect(url_for('home',id1=session['name']))
+    if session.get('name'):
+        return redirect(url_for('home',id1=session.get('name')))
     if request.method=="POST":
         print(request.form)
         user=request.form['user']
@@ -64,9 +65,9 @@ def login():
                 flash('Invalid Password')
                 return render_template('loginpage.html')
         else:
-            print('hi')
+
             flash('Invalid user id')
-            return render_template('starting.html')      
+            return render_template('loginpage.html')
     return render_template('loginpage.html')
 @app.route('/signup',methods=['GET','POST'])
 def signup():
@@ -79,6 +80,7 @@ def signup():
             cursor=mysql.connection.cursor()
             cursor.execute('insert into signup values(%s,%s,%s,%s,%s)',[name,number,gender,password,email])
             mysql.connection.commit()
+
             flash('Details registered succesfully')
             return render_template('signuppage.html')
     return render_template('signuppage.html')
@@ -119,7 +121,7 @@ def dal():
 @app.route('/women',methods=['GET','POST'])
 def women():
     return render_template('women.html')
-    
+
 
 @app.route('/men',methods=['GET','POST'])
 def men():
@@ -278,9 +280,34 @@ def doormats():
 def mirrors():
     return render_template('mirror.html')
 
-     
+@app.route('/successful',methods=['GET','POST'])
+def successful():
+    return render_template('success.html')
+
+
+@app.route('/pay/<name>/<q>/<price>',methods=['GET','POST'])
+def pay(name,q,price):
+    checkout_session=stripe.checkout.Session.create(
+        success_url=request.host_url+url_for('success'),
+        line_items=[
+            {
+                'price_data': {
+                    'product_data': {
+                        'name': f'{name}',
+                    },
+                    'unit_amount': int(price)*100,
+                    'currency': 'inr',
+                },
+                'quantity': q,
+            },
+            ],
+        mode="payment",)
+    return redirect(checkout_session.url)
+@app.route('/success')
+def success():
+    return redirect(url_for('successful'))
+
 @app.route('/logout')
 def logout():
     session['name']=None
-    return redirect(url_for('welcome'))        
-app.run(debug=True,port='8000')  
+    return redirect(url_for('welcome'))

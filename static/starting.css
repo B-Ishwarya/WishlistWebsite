@@ -72,7 +72,7 @@
 }
 
 .card{
-   
+
     background-color:darkgreen;
     width: 180px;
     border-radius: 20px;
@@ -92,10 +92,11 @@
     font-weight: bolder;
 }
 .mar{
-    background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3798.jpg?w=740&t=st=1671527584~exp=1671528184~hmac=c3c17950553d4f2774639d88d76f8ee9d6c35295ae8c5b2843327fce4eadb191");
+    background-color:transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    color:darkgreen;
+    color:#03203C;
+    font-weight:bolder;
 }
 
 
@@ -106,20 +107,20 @@
 .fruit{
     background-image: url("https://img.freepik.com/premium-photo/abstract-multi-color-powder-explosion-white-background-freeze-motion-dust-particles-splash_36326-3453.jpg?w=740");
     background-repeat: no-repeat;
-    background-size: cover; 
-    height: 100vh; 
+    background-size: cover;
+    height: 100vh;
 }
 .fruitlay{
     background-image: url("https://img.freepik.com/free-vector/fruit-vegetables-hand-drawn-design_23-2148500968.jpg?w=740&t=st=1671614596~exp=1671615196~hmac=19a9e383c159b3b824de82a20bcc2385afac6f35d4a32a686aa04532625d5a46");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 170vh; 
+    height: 170vh;
 
 }
 .fruitimage{
     height: 75px;
     width: 100px;
-    
+
 }
 
 .fruitcard{
@@ -129,7 +130,7 @@
     padding: 10px;
     height: 260px;
     text-align: center;
-    
+
     margin: 15px;
 }
 .fruitheading{
@@ -162,7 +163,7 @@
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
-    
+
 }
 
 
@@ -173,14 +174,14 @@
 .Vegetable{
     background-image: url("https://img.freepik.com/premium-photo/abstract-multi-color-powder-explosion-white-background-freeze-motion-dust-particles-splash_36326-3453.jpg?w=740");
     background-repeat: no-repeat;
-    background-size: cover; 
-    height: 100vh; 
+    background-size: cover;
+    height: 100vh;
 }
 .veglay{
     background-image: url("https://img.freepik.com/free-vector/vegetables-fruit-background_23-2148485147.jpg?w=740&t=st=1671707721~exp=1671708321~hmac=18d840177b7f29c1a5e92237fadea41e7031f0391e4447e0663f0b64b617c0f4");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 160vh; 
+    height: 160vh;
 
 }
 .vegcard{
@@ -190,7 +191,7 @@
     padding: 10px;
     height: 280px;
     text-align: center;
-    
+
     margin: 15px;
 }
 .vegpara{
@@ -218,7 +219,7 @@
     background-image: url("https://img.freepik.com/free-vector/spices-herbs-realistic-frame-background-with-mint-garlic-cinnamon_1284-56625.jpg?w=740&t=st=1671731925~exp=1671732525~hmac=aaace1359894bf18e09a7563c478da03d1220a47fb8047039a662c08c5173fdf");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; 
+    height: 100vh;
 }
 
 
@@ -227,7 +228,7 @@
     background-image: url("https://img.freepik.com/free-vector/vector-realistic-yellow-oil-with-air-bubbles_107791-2123.jpg?w=996&t=st=1671719238~exp=1671719838~hmac=cd94bd34d4cc91077f93964b8578c332e9422b69d96628340749b2b8e39a3f0f");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 102vh; 
+    height: 102vh;
 }
 
 
@@ -236,7 +237,7 @@
     background-image: url("https://as1.ftcdn.net/v2/jpg/02/46/40/20/1000_F_246402069_oMMCGrlhO1h3N1igea3QKbJigQbp7Fkm.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 102vh; 
+    height: 102vh;
 }
 
 
@@ -254,7 +255,7 @@
     background-image: url("https://img.freepik.com/free-photo/top-view-organic-cosmetic-products_23-2148317616.jpg?w=740&t=st=1671726236~exp=1671726836~hmac=38ba26e29aaeb95cad5d0e74fbcdc24201304c5d90da31cdcab754c4e59ed83d");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 102vh; 
+    height: 102vh;
 }
 
 
@@ -263,7 +264,7 @@
     background-image: url("https://img.freepik.com/premium-vector/swirling-mellow-milk-effect-3d-illustration-blue-background_317442-792.jpg?w=740");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 102vh; 
+    height: 102vh;
 }
 
 
@@ -273,7 +274,7 @@
     background-image: url("https://img.freepik.com/premium-photo/various-legumes-eco-bag_147689-158.jpg?w=740");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 102vh; 
+    height: 102vh;
 }
 
 
@@ -334,7 +335,7 @@
     background-image: url("https://img.freepik.com/premium-photo/watercolor-dark-purple-wine-color-background-texture_145343-216.jpg?w=740");
     background-size:contain;
     height:210vh;
-    
+
 }
 .ethniccard{
     display: flex;
@@ -346,7 +347,7 @@
     text-align: center;
     margin: 15px;
     display: grid;
-    align-items: center; 
+    align-items: center;
     grid-template-columns: 1fr 1fr ;
     column-gap: 5px;
 }
@@ -481,7 +482,7 @@
 }
 
 
-/* Bed sheets*/ 
+/* Bed sheets*/
 .bedlay{
     background-image: url("https://img.freepik.com/premium-photo/watercolor-dark-purple-wine-color-background-texture_145343-216.jpg?w=740");
     background-size:contain;
@@ -494,7 +495,7 @@
     background-size:contain;
     height:2500vh;
 }
-.cartlay{   
+.cartlay{
      font-family: 'Times New Roman', Times, serif;
      font-size: 30px;
      color: darkgreen;
@@ -502,3 +503,17 @@
      padding-bottom: 30px;
 }
 
+/*contact us*/
+.container{
+    background-image: url("https://img.freepik.com/free-vector/flat-geometric-shapes-background_52683-62851.jpg?w=740&t=st=1674296180~exp=1674296780~hmac=664d850c8a40df2768ad0464b7fffbc4f9eb9b66019eeb116ecbc9362980e40d");
+    background-size:cover;
+    text-align:center;
+    height:100vh;
+    padding-bottom:10px;
+}
+
+.mapmatter{
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+}

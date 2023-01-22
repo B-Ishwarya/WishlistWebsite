@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .imageres{
+            height: 280px;
+            width: 300px;
+        }
+
+        .card{
+
+            padding-top: 100px;
+            padding-bottom: 250px;
+            background-color:white;
+            width: 500px;
+            border-radius: 20px;
+            height: 200px;
+            align-items: center;
+            text-align: center;
+            margin: 15px;
+        }
+        .heading{
+            color:#12AD2B;
+            font-size: 30px;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .paragraph{
+        font-weight: bolder;
+        }
+        .ca{
+            background-color: #12AD2B;
+            background-size: cover;
+            padding-bottom: 10px;
+            padding-top: 50px;
+            padding-left: 400px;
+        }
+        .btn{
+            background-color:#12AD2B;
+            border: #12AD2B;
+            height: 5vh;
+            width: 10vw;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ca">
+    <div class="card">
+        <img src="https://cdn.dribbble.com/users/2185205/screenshots/7886140/02-lottie-tick-01-instant-2.gif" class="imageres" alt="">
+        <h1 class="heading">Payment Successful</h1>
+        <p class="paragraph"><a href="{{url_for('homepage')}}"><button class="btn">Continue Shopping</button></a></p>
+    </div>
+
+</div>
+
+</body>
+</html>
